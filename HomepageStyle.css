@@ -1,0 +1,45 @@
+/*ELEMENTS*/
+.Book {    
+    font-family: helvetica; /*Font*/
+    font-size: 13px;
+    background-color: white;
+    border-radius: 5px; 
+    border: 1px solid #0000004a;
+    width: 170px; /*Dimensions*/
+    height: 350px; /*Dimensions*/
+    text-align: left;
+    cursor: pointer; /*Changes the cursor when hovering over the button*/
+    padding: 9px 9px; /*Internal space for button content*/
+    white-space: nowrap; /*Avoid text line breaks*/
+    overflow: hidden; /*Hides any overflowing text*/
+    text-overflow: ellipsis; /*Adds ... to overflowing text*/
+    position: relative; /*Necessary for internal span positioning*/
+}
+.Book span {   
+    position: absolute; 
+    width: 170px; 
+    height: 1px; 
+    background-color: #0000004a; 
+    top: 246px;
+    left: 0;
+}
+
+/*TITLE*/
+a {
+    font-weight: bold;
+}
+/*PRICE*/
+b {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    line-height: 30px;
+}
+/*ADD TO CART*/
+c {
+    color:rgb(0, 0, 255);
+}
+c:hover {
+    font-size: 15px;
+    color: rgba(0, 106, 255, 0.723);
+}
