@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Libro</title>
+    <link rel="stylesheet" href="productDescription.css"> <!-- Puedes enlazar tu archivo CSS aquí -->
+</head>
+<body>
+    
+    <header >
+        <div class="header">
+            <div class="header-logo">
+                <img src="logo.png" alt="I-CHEGA">
+            </div>
+            <div class="buscador">
+                <input type="text" placeholder="Buscar por autor, titulo, ISBN...">
+            </div>
+            <button class="boton-lupa">Buscar</button>
+            <nav class="header-nav">transport
+
+        <nav class="header-nav">
+            <ul class="header-menu-cat">
+                <li><a href="#">Ficción</a></li>
+                <li><a href="#">No ficción</a></li>
+                <li><a href="#">Misterio</a></li>
+                <li><a href="#">Ciencia ficción</a></li>
+                <li><a href="#">Romance</a></li>
+                <li><a href="#">Fantasía</a></li>
+                <li><a href="#">Biografía</a></li>
+                <li><a href="#">Historia</a></li>
+                <li><a href="#">Autoayuda</a></li>
+                <li><a href="#">Poesía</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="book-details">
+            
+            <div class="book-image">
+                <img src="Image8.jpg" alt="Portada del Libro">
+            </div>
+
+            <div class="book-description">
+                <h1>STEPHEN KING - LA NIEBLA (The Mist)</h1>
+                <h3>Genero</h3>
+                <span class = "generos">Literatura</span>
+                <span class = "generos">Fantasia</span>
+                <span class = "generos">Terror</span>
+                <span class = "generos">Suspense</span>
+                <h3>Sinopsis</h3>
+                <p id="descripcion-corta">La trama comienza cuando una extraña y densa niebla envuelve la ciudad de Bridgton, Maine, después de una tormenta eléctrica. David Drayton, el protagonista, se encuentra en un supermercado con su hijo Billy cuando la niebla comienza a cubrir todo. Pronto, los habitantes de la ciudad se dan cuenta de que algo aterrador se oculta en la niebla: criaturas grotescas y mortales.</p>
+                <p id="descripcion-larga" style="display: none;">A medida que el caos y el terror se apoderan de la ciudad, un grupo diverso de personas se refugia en el supermercado en busca de protección. La historia se centra en sus luchas internas y desesperadas para sobrevivir, tanto a las criaturas acechantes como a la creciente paranoia y la tensión entre los supervivientes.<br><br>La niebla y las criaturas que la habitan se convierten en un símbolo de lo desconocido y el miedo que se oculta en las profundidades de la psicología humana. La novela explora temas como el aislamiento, la supervivencia y la desesperación, y plantea preguntas sobre la naturaleza de la fe, la religión y la moral en situaciones extremas.<br><br>Sin entrar en spoilers, "The Mist" es conocida por su final impactante y conmovedor que ha dejado una fuerte impresión en los lectores a lo largo de los años. La historia también ha sido adaptada en una película de 2007 dirigida por Frank Darabont y una serie de televisión que se emitió en 2017. La novela es un ejemplo de la habilidad de Stephen King para crear atmósferas aterradoras y explorar los aspectos más oscuros de la psicología humana en situaciones de crisis.</p>
+                <a id="ver-mas" onclick="toggleDescripcion();">Ver más</a>
+                <p>
+                <table>
+                    <tr>
+                        <td class="pBeauty">ISBN:</td>
+                        <td class = "td-separate">1234567890</td>
+                        
+                        <td class="pBeauty">Autor:</td>
+                        <td class = "td-separate">King</td>
+
+                    </tr>
+                </table>
+
+                <br>    
+
+                <section class="compraYa">
+                    <button><img src="bolsa-de-la-compra.png" alt="bolsa de la compra" width=" 20" height="20">Añadir al carrito</button>
+                    <div>
+                        <form>
+                            <table class="otras-tablas">
+                                <td>
+                                    <p class="clasificacion">
+                                        <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                                        --><label for="radio1">★</label><!--
+                                        --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                                        --><label for="radio2">★</label><!--
+                                        --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                                        --><label for="radio3">★</label><!--
+                                        --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                                        --><label for="radio4">★</label><!--
+                                        --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                                        --><label for="radio5">★</label>
+                                    </p>
+                                </td>
+
+                            </table>                            
+                        </form>                           
+                    </div>
+
+                </section>
+            </div>
+
+            <section class="book-options">
+                <div class = "book-options-price">
+                    <h2>19,89€</h2>
+                </div>
+                <div class="book-options-tapa">
+                    <h4>Elige el tipo de tapa</h4>
+                    <span>
+                        <button class="tapa-tipo"> Tapa blanda </button>
+                    </span>
+                    <span>
+                        <button class="tapa-tipo"> Tapa dura </button>
+                    </span>
+                </div>
+                <div class="book-options-transporte">
+                    <h4>Elige el tipo de transporte</h4>
+                    <span>
+                        <button class="tapa-tipo"> 
+                            <img src="camion-de-envio.png" alt="camion" width="20" height="20">
+                            Estandar    
+                        </button>
+                        <button class="tapa-tipo"> 
+                            <img src="entrega-rapida.png" alt="camion-express" width="20" height="20">
+                            Express    
+                        </button>
+                    </span>
+                </div>
+                <div class="container">
+                    <h4>Encuentranos</h4>
+                <div id="map_container"></div>
+                  <div id="map"></div>
+                </div>	
+            
+                
+            </section>
+
+        </section>
+        <section class="secciones-secundarias">
+            <section class = "recomendaciones">
+                <h2>Porque has leido "La niebla - Stephen King" te recomendamos ...</h2>
+                <span>
+                    <button class="Book"> <!--Element4-->
+                        <div><img src="Image4.jpg" width="150" height="225" /></div>
+                        <span></span>
+                        <div><a><br>RETORNO DE LAS<br>ESTRELLAS</a></div>
+                        <div>Stanisław Lem</div>
+                        <div><b>13.77€</b></div>
+                        <div>
+                            <c>Add to cart</c>
+                        </div>
+                    </button>
+                </span>
+                <span>
+                    <button class="Book"> <!--Element2-->
+                        <div><img src="Image2.jpg" width="150" height="225" /></div>
+                        <span></span>
+                        <div><a><br>EL PALACIO DE<br>LA MEDIA NOCHE</a></div>
+                        <div>Carlos Ruiz Zafón</div>
+                        <div><b>9.45€</b></div>
+                        <div>
+                            <c>Add to cart</c>
+                        </div>
+                    </button>
+                </span>
+                <span>
+                    <button class="Book"> <!--Element5-->
+                        <div><img src="Image5.jpg" width="150" height="225" /></div>
+                        <span></span>
+                        <div><a><br>INVISIBLE<br><br></a></div>
+                        <div>Eloy Moreno</div>
+                        <div><b>15.15€</b></div>
+                        <div>
+                            <c>Add to cart</c>
+                        </div>
+                    </button>
+                </span>
+            </section>
+            <section class="ficha-tecnica">
+                <h2>Ficha tecnica del libro</h2>
+                <table>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <th>Nº de páginas:</th>
+                                    <td>320</td>
+                                </tr>
+                                <tr>
+                                    <th>Editorial:</th>
+                                    <td>DEBOLSILLO</td>
+                                </tr>
+                                <tr>
+                                    <th>Idioma:</th>
+                                    <td>CASTELLANO</td>
+                                </tr>
+                                <tr>
+                                    <th>Encuadernación:</th>
+                                    <td>Tapa blanda</td>
+                                </tr>
+                                <tr>
+                                    <th>ISBN:</th>
+                                    <td>9788497590488</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <th>Año de edición:</th>
+                                    <td>2002</td>
+                                </tr>
+                                <tr>
+                                    <th>Plaza de edición:</th>
+                                    <td>BARCELONA</td>
+                                </tr>
+                                <tr>
+                                    <th>Fecha de lanzamiento:</th>
+                                    <td>24/06/2002</td>
+                                </tr>
+                                <tr>
+                                    <th>Alto:</th>
+                                    <td>18 cm</td>
+                                </tr>
+                                <tr>
+                                    <th>Ancho:</th>
+                                    <td>11 cm</td>
+                                </tr>
+                                <tr>
+                                    <th>Colección:</th>
+                                    <td>JET DEBOLSILLO</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+        <section class="Valoraciones-personas">
+            <h3>Valoraciones</h3>
+            <div class="opinion">
+                <span class="persona">
+                    <img src="autoestima-valoracion-personal.webp" alt="persona-valoracion">
+                    <h4>Natalia Pérez</h4>
+                </span>
+                
+                <form>
+                    <table class="otras-tablas">
+                        <tr>
+                            <td>
+                                <p>"Uno de los mejores libros para iniciarte en el mundo del terror que he leído."</p>                                            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="clasificacion">
+                                    <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                                    --><label for="radio1">★</label><!--
+                                    --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                                    --><label for="radio2">★</label><!--
+                                    --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                                    --><label for="radio3">★</label><!--
+                                    --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                                    --><label for="radio4">★</label><!--
+                                    --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                                    --><label for="radio5">★</label>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="opinion">
+                <span class="persona">
+                    <img src="pradells-1660902907.png" alt="persona-valoración">
+                    <h4>Joan Pradrells</h4>
+                </span>
+                
+                <form>
+                    <table class="otras-tablas">
+                        <tr>
+                            <td>
+                                <p>"No es una pesa pero sirve para calentar biceps."</p>                                            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="clasificación">
+                                    <input id="radio6" type="radio" name="estrellas" value="5"><!--
+                                    --><label for="radio6">★</label><!--
+                                    --><input id="radio7" type="radio" name="estrellas" value="4"><!--
+                                    --><label for="radio7">★</label><!--
+                                    --><input id="radio8" type="radio" name="estrellas" value="3"><!--
+                                    --><label for="radio8">★</label><!--
+                                    --><input id="radio9" type="radio" name="estrellas" value="2"><!--
+                                    --><label for="radio9">★</label><!--
+                                    --><input id="radio10" type="radio" name="estrellas" value="1"><!--
+                                    --><label for="radio10">★</label>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </section>       
+    </main>
+
+    <script>
+    function toggleDescripcion() {
+        var descripcionCorta = document.getElementById("descripcion-corta");
+        var descripcionLarga = document.getElementById("descripcion-larga");
+        var verMasBoton = document.getElementById("ver-mas");
+
+        if (descripcionLarga.style.display === "none") {
+            descripcionCorta.style.display = "none";
+            descripcionLarga.style.display = "block";
+            verMasBoton.innerHTML = "Ver menos";
+        } else {
+            descripcionCorta.style.display = "block";
+            descripcionLarga.style.display = "none";
+            verMasBoton.innerHTML = "Ver más";
+        }
+    }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        //Google Maps JS
+        //Set Map
+        function initialize() {
+                var myLatlng = new google.maps.LatLng(53.3333,-3.08333);
+                var imagePath = 'http://m.schuepfen.ch/icons/helveticons/black/60/Pin-location.png'
+                var mapOptions = {
+                    zoom: 11,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+            //Callout Content
+            var contentString = 'Some address here..';
+            //Set window width + content
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString,
+                maxWidth: 500
+            });
+
+            //Add Marker
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                icon: imagePath,
+                title: 'image title'
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map,marker);
+            });
+
+            //Resize Function
+            google.maps.event.addDomListener(window, "resize", function() {
+                var center = map.getCenter();
+                google.maps.event.trigger(map, "resize");
+                map.setCenter(center);
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+    
+</body>
+
+<footer>
+    <p>
+        © 2023 I-CHIGO - Todos los derechos reservados.
+        [Enlace a Política de Privacidad] | [Enlace a Términos y Condiciones]
+        Dirección: Universidad Rey Juan Carlos, Móstoles, España
+        Teléfono: +34 123 456 789
+        Email: info@ichigo.com
+    </p>
+
+
+</footer>
+
+</html>

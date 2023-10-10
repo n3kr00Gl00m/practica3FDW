@@ -1,0 +1,374 @@
+body {
+    background-color: #fff; /* Fondo blanco */
+    color: #000; /* Texto negro */
+    font-family: Arial, sans-serif; /* Tipo de fuente predeterminado */
+}
+/*BODY*/
+header {
+    background-color: white;
+    text-align: center;
+    font-family: helvetica;
+}
+
+footer {
+
+    background-color: #000;
+    padding: 20px;
+}
+
+footer > p {
+    color: white
+}
+
+/*BUSCADOR*/
+.buscador {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    outline: 1px solid #000;
+    padding: 3px 3px 3px 8px;
+}
+
+.boton-lupa {
+    margin: 5px;
+}
+
+div > input {
+  
+    border: none;
+    outline: none;
+    
+}
+
+
+/*TITLE*/
+
+.header {
+    color: white; /* Color de texto */
+    padding: 10px 0; /* Espaciado interno superior e inferior */
+    display: flex; /* Hacer que los elementos del encabezado sean flexibles */
+    justify-content: space-between; /* Espaciado uniforme entre elementos */
+    align-items: center; /* Centrar verticalmente los elementos */
+}
+
+.header-logo img { 
+    margin-left: 20px;
+    align-self: start;
+    padding-right: 50px;
+}
+
+.header-nav ul {
+    list-style: none;
+    padding-left: 50px;
+    margin: 0;
+}
+
+.header-menu li {
+    display: inline;
+    margin-right: 20px; /* Espaciado entre elementos del menú */
+}
+
+.header-menu-cat a {
+    text-decoration: none;
+    color: black;
+    font-weight:lighter;
+}
+
+.header-menu-cat li :hover {
+    text-decoration: none;
+    color: white;
+    font-weight:lighter;
+    background-color: grey;
+    padding: 10px;
+}
+
+.header-menu-cat li {
+    display: inline;
+    margin-right: 20px; /* Espaciado entre elementos del menú */
+}
+
+.header-menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.header-menu a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 900px; /* Ancho máximo del contenido principal */
+    margin: 0 auto; /* Centrar el contenido en la página */
+    padding: 20px;
+}
+
+.book-details {
+    display: flex; /* Establecer el diseño de elementos secundarios en fila */
+}
+
+.book-image {
+    flex: 1; /* Hace que la imagen ocupe el 50% del ancho disponible */
+    margin-right: 20px; /* Espacio entre la imagen y la descripción */
+}
+
+.book-image img {
+    max-width: 300px;
+    height: auto;
+}
+
+.book-options {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.book-description {
+    flex: 2; /* Hace que la descripción ocupe el 50% del ancho disponible */
+}
+
+.buy-now {
+    margin-top: 20px;
+}
+
+/* Estilo del botón de compra */
+#comprar {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Cambiar el color del botón cuando se pasa el mouse sobre él */
+#comprar:hover {
+    background-color: #555;
+}
+
+.pBeauty{
+    color: blue;
+}
+
+.ficha-tecnica-td td:first-child {
+    border-right: 1px solid #dddddd;
+}
+
+
+#ver-mas{
+    color:blue;
+    padding-bottom: 40px;
+    
+}
+
+#ver-mas:hover{
+    text-decoration: underline;
+}
+
+table {
+    display: flex; /* Hacer que los elementos del encabezado sean flexibles */
+    justify-content: space-between; /* Espaciado uniforme entre elementos */
+}
+
+/*ficha tecnica---------------------------------------------------------------------------*/
+.ficha-tecnica table {
+    width: 100%;
+    border-collapse: collapse;
+    justify-content: center;
+}
+
+.ficha-tecnica th, .ficha-tecnica td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.ficha-tecnica th {
+    background-color: #f2f2f2;
+}
+
+.ficha-tecnica td:first-child {
+    border-right: 1px solid #dddddd;
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/*ESTRELLAS DE VALORACION*/
+
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  label {
+    color: orange;
+  }
+
+/*COMPRAR AHORA*/
+.compraYa {
+    display: flex; /* Hacer que los elementos se muestren en la misma línea */
+    align-items: center; /* Centrar verticalmente los elementos */
+    justify-content: left;
+}
+
+.compraYa button {
+    margin-right: 10px; /* Espaciado entre el botón y las estrellas */
+}
+
+/* Estilos para las estrellas de valoración */
+.clasificacion {
+    display: flex; /* Hacer que las estrellas se muestren en la misma línea */
+}
+
+/* Estilos para el botón "Añadir al carrito" */
+.compraYa button {
+    background-color: blue;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.compraYa img {
+    margin-right: 10px;
+}
+
+/* Cambiar el color del botón cuando se pasa el mouse sobre él */
+.compraYa button:hover {
+    background-color: #555;
+}
+
+
+/*Etiquetas de genero*/
+
+.generos {
+    padding: 5px;
+    background-color: blue;
+    color: white;
+}
+
+/*RECOMENDACIONES*/
+/*ELEMENTS*/
+.Book { 
+    font-family: helvetica; /*Font*/
+    font-size: 13px;
+    background-color: white;
+    border-radius: 5px; 
+    border: 1px solid #0000004a;
+    width: 170px; /*Dimensions*/
+    height: 350px; /*Dimensions*/
+    text-align: left;
+    cursor: pointer; /*Changes the cursor when hovering over the button*/
+    padding: 9px 9px; /*Internal space for button content*/
+    white-space: nowrap; /*Avoid text line breaks*/
+    overflow: hidden; /*Hides any overflowing text*/
+    text-overflow: ellipsis; /*Adds ... to overflowing text*/
+    position: relative; /*Necessary for internal span positioning*/
+    margin: 5px;
+}
+.Book span {   
+    position: absolute; 
+    width: 170px; 
+    height: 1px; 
+    background-color: #0000004a; 
+    top: 246px;
+    left: 0;
+}
+/*Title*/
+a {
+    font-weight: bold;
+}
+/*Price*/
+b {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    line-height: 30px;
+}
+/*Add to cart*/
+c {
+    color:rgb(0, 0, 255);
+}
+c:hover {
+    font-size: 15px;
+    color: rgba(0, 106, 255, 0.723);
+}
+
+
+/*Secciones secundarias*/
+
+.secciones-secundarias {
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*OPINIONEs*/
+/* Estilo CSS para la sección de Valoraciones */
+.Valoraciones-personas {
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+/* Estilo CSS para las cajas de opinión */
+.opinion {
+    display: inline-block; /* Hace que las opiniones aparezcan una al lado de la otra */
+    width: 300px; /* Ajusta el ancho de las opiniones según tus necesidades */
+    margin: 10px; /* Espacio entre las opiniones */
+    border: 1px solid #ddd; /* Borde */
+    padding: 10px; /* Espaciado interno */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Estilo CSS para las imágenes redondas */
+.opinion img {
+    width: 50px; /* Ancho igual al alto para hacer la imagen redonda */
+    height: 50px; /* Alto igual al ancho para hacer la imagen redonda */
+    border-radius: 50%; /* Hace que la imagen sea completamente redonda */
+    margin-right: 10px; /* Margen derecho entre la imagen y el nombre */
+}
+
+/* Estilo CSS para el nombre */
+.opinion h4 {
+    margin: 0; /* Elimina el margen superior e inferior del nombre */
+}
+
+/* Estilo CSS para la clasificación de estrellas */
+.opinion .clasificacion {
+    font-size: 24px; /* Tamaño de fuente de las estrellas */
+    margin: 10px 0; /* Espaciado superior e inferior */
+}
+
+/* Estilo CSS para los radios y etiquetas de estrellas */
+.opinion input[type="radio"] {
+    display: none; /* Oculta los radios originales */
+}
+
+.opinion label {
+    cursor: pointer; /* Cambia el cursor al pasar sobre las etiquetas */
+}
+
+/* Estilo CSS para la etiqueta de estrella seleccionada */
+.opinion input[type="radio"]:checked + label {
+    color: gold; /* Cambia el color de la estrella seleccionada a dorado */
+}
+
+/*Map*/
+.container{
+    width: 100%;
+    margin: 0 auto;
+    margin-top:50px;
+  }
+  
+  #map_container{
+    position: relative;
+    height: 100px;
+    width: 100px;
+}
+  #map{
+      height: 0;
+      overflow: hidden;
+      padding-bottom: 22.25%;
+      padding-top: 30px;
+      position: relative;
+  }
