@@ -1,41 +1,89 @@
 /*BODY*/
 body {
-    background-color: #f0f0f0;
+    background-color: white;
     text-align: center;
     font-family: helvetica;
 }
+
+/*BUSCADOR*/
+.buscador {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    outline: 1px solid #000;
+    padding: 3px 3px 3px 8px;
+}
+
+.boton-lupa {
+    margin: 5px;
+}
+
+div > input {
+  
+    border: none;
+    outline: none;
+    
+}
+
+
 /*TITLE*/
-h1 {
-    font-family: 'Fantasy';
+
+.header {
+    color: white; /* Color de texto */
+    padding: 10px 0; /* Espaciado interno superior e inferior */
+    display: flex; /* Hacer que los elementos del encabezado sean flexibles */
+    justify-content: space-between; /* Espaciado uniforme entre elementos */
+    align-items: center; /* Centrar verticalmente los elementos */
+}
+
+.header-logo img { 
+    margin-left: 20px;
+    align-self: start;
+    padding-right: 50px;
+}
+
+.header-nav ul {
+    list-style: none;
+    padding-left: 50px;
+    margin: 0;
+}
+
+.header-menu li {
+    display: inline;
+    margin-right: 20px; /* Espaciado entre elementos del menú */
+}
+
+.header-menu-cat a {
+    text-decoration: none;
+    color: black;
+    font-weight:lighter;
+}
+
+.header-menu-cat li :hover {
+    text-decoration: none;
     color: white;
-    font-size: 45px;
-    padding: 20px;
-    background-color: #2c3e50;
-    border-bottom: 5px solid rgba(21, 143, 156, 0.619);
-    margin: 10;
+    font-weight:lighter;
+    background-color: grey;
+    padding: 10px;
 }
-/*BUTTONS*/
-.Button1 {
-    font-family: 'helvetica';
-    height: 31px; /*Dimensions*/
-    width: 450px; /*Dimensions*/
-    font-size: 15px;   
-    border-radius: 5px; 
-    background-color: rgba(0, 106, 255, 0.145);   
-    border-radius: 5px; 
-    border: 1px solid #0000004a;
-    margin: 3px;
+
+.header-menu-cat li {
+    display: inline;
+    margin-right: 20px; /* Espaciado entre elementos del menú */
 }
-.Button2 {    
-    font-family: 'helvetica';
-    height: 35px; /*Dimensions*/
-    font-size: 15px;   
-    border-radius: 5px; 
-    background-color: white;   
-    border-radius: 5px; 
-    border: 1px solid #0000004a;
-    margin: 3px;
+
+.header-menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
+
+.header-menu a:hover {
+    text-decoration: underline;
+}
+
 /*ELEMENTS*/
 .Book { 
     font-family: helvetica; /*Font*/
