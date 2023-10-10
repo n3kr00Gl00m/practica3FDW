@@ -81,3 +81,8 @@ c:hover {
     font-size: 15px;
     color: rgba(0, 106, 255, 0.723);
 }
+/*Forms*/
+.main-form{
+    padding-left: 30px;
+    padding-right: 30px;
+}
