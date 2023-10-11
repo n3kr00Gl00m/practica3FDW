@@ -5,80 +5,68 @@ body {
     font-family: helvetica;
 }
 
-/*BUSCADOR*/
-.buscador {
-    align-items: center;
-    background-color: #fff;
-    display: flex;
-    flex-grow: 1;
-    height: 100%;
-    outline: 1px solid #000;
-    padding: 3px 3px 3px 8px;
-}
-
-.boton-lupa {
-    margin: 5px;
-}
-
-div > input {
-  
-    border: none;
-    outline: none;
-}
 /*TITLE*/
-
-.header {
-    color: white; /* Color de texto */
-    padding: 10px 0; /* Espaciado interno superior e inferior */
-    display: flex; /* Hacer que los elementos del encabezado sean flexibles */
-    justify-content: space-between; /* Espaciado uniforme entre elementos */
-    align-items: center; /* Centrar verticalmente los elementos */
+/*Logo*/
+.header-logo { 
+    margin-right: 40px; 
+    vertical-align: middle;  
 }
-
-.header-logo img { 
-    margin-left: 20px;
-    align-self: start;
-    padding-right: 50px;
-}
-
-.header-nav ul {
-    list-style: none;
-    padding-left: 50px;
-    margin: 0;
-}
-
-.header-menu li {
-    display: inline;
-    margin-right: 20px; /* Espaciado entre elementos del menú */
-}
-
-.header-menu-cat a {
-    text-decoration: none;
-    color: black;
-    font-weight:lighter;
-}
-
-.header-menu-cat li :hover {
-    text-decoration: none;
-    color: white;
-    font-weight:lighter;
-    background-color: grey;
-    padding: 10px;
-}
-
-.header-menu-cat li {
-    display: inline;
-    margin-right: 20px; /* Espaciado entre elementos del menú */
-}
-
-.header-menu a {
-    text-decoration: none;
-    color: black;
+/*Menu*/
+.Menu {
     font-weight: bold;
+    font-family: helvetica;
+    font-size: 16px;
+    text-decoration: underline;
+    background-color: white;
+    border-radius: 5px; 
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 5px 5px;  
+}
+.Menu:hover {
+    background-color: rgba(30, 122, 93, 0.678);
+    color: white;
+}
+/*Searcher*/
+.buscador {
+    border: 1px;
+    border-radius: 5px;
+    outline: 1px solid #000;  
+    padding: 10px 10px 10px 10px;
+    margin: 20px; 
+    flex: 1;
+    display: flex;
+    text-align: left;
+    overflow: hidden; /*Hides any overflowing text*/
+}
+.boton-lupa {
+    border-radius: 3px; 
+    border: 1px solid black;
+    background-color: rgba(12, 135, 173, 0.34);
+    font-family: helvetica;
+    font-size: 13px;  
+    align-items: right; 
+    margin-right: 10px; 
+}
+div > input {  
+    border: none;
+    outline: none;    
 }
 
-.header-menu a:hover {
-    text-decoration: underline;
+/*LITERARY GENRES*/
+.LiteraryGenres {
+    font-family: helvetica;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 5px; 
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 5px 5px;
+    margin: 3px;    
+}
+.LiteraryGenres:hover {
+    background-color: rgba(30, 122, 93, 0.678);
+    color: white;
 }
 
 /*ELEMENTS*/
@@ -95,7 +83,6 @@ div > input {
     padding: 9px 9px; /*Internal space for button content*/
     white-space: nowrap; /*Avoid text line breaks*/
     overflow: hidden; /*Hides any overflowing text*/
-    text-overflow: ellipsis; /*Adds ... to overflowing text*/
     position: relative; /*Necessary for internal span positioning*/
     margin: 5px;
 }
@@ -107,9 +94,15 @@ div > input {
     top: 246px;
     left: 0;
 }
+del {
+    font-size: 12px;
+    color: rgba(17, 166, 17, 0.878);
+}
 /*Title*/
 a {
     font-weight: bold;
+    color: black;
+    text-decoration: none;
 }
 /*Price*/
 b {
@@ -130,4 +123,32 @@ c:hover {
 .main-form{
     padding-left: 30px;
     padding-right: 30px;
+}
+
+/*CREATE NEW ITEM*/
+.NewButton {
+    font-family: helvetica;
+    font-size: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #0000004a;
+    color: black;
+    background-color: #0000004a;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+.NewButton:hover {
+    background-color: rgba(30, 122, 93, 0.678);
+    color: white;
+}
+
+/*FOOTER*/
+footer {
+    margin-top: 40px;
+    background-color: #000;
+    padding: 20px;
+    color: white
 }

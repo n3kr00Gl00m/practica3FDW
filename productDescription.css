@@ -1,102 +1,58 @@
+/*TITLE*/
+/*Logo*/
+.header-logo { 
+    margin-right: 20px; 
+    vertical-align: middle;  
+}
+/*Menu*/
+.Menu {
+    font-weight: bold;
+    font-family: helvetica;
+    font-size: 16px;
+    text-decoration: underline;
+    background-color: white;
+    border-radius: 5px; 
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 5px 5px;  
+}
+.Menu:hover {
+    background-color: rgba(30, 122, 93, 0.678);
+    color: white;
+}
+/*LITERARY GENRES*/
+.LiteraryGenres {
+    font-family: helvetica;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 5px; 
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 3px 3px;
+    margin: 0px;    
+}
+.LiteraryGenres:hover {
+    background-color: rgba(30, 122, 93, 0.678);
+    color: white;
+}
+
+
+
+
+
 body {
     background-color: #fff; /* Fondo blanco */
     color: #000; /* Texto negro */
     font-family: Arial, sans-serif; /* Tipo de fuente predeterminado */
 }
 /*BODY*/
-header {
-    background-color: white;
-    text-align: center;
-    font-family: helvetica;
-}
-
 footer {
 
     background-color: #000;
     padding: 20px;
 }
-
 footer > p {
     color: white
-}
-
-/*BUSCADOR*/
-.buscador {
-    align-items: center;
-    background-color: #fff;
-    display: flex;
-    flex-grow: 1;
-    height: 100%;
-    outline: 1px solid #000;
-    padding: 3px 3px 3px 8px;
-}
-
-.boton-lupa {
-    margin: 5px;
-}
-
-div > input {
-  
-    border: none;
-    outline: none;
-    
-}
-
-
-/*TITLE*/
-
-.header {
-    color: white; /* Color de texto */
-    padding: 10px 0; /* Espaciado interno superior e inferior */
-    display: flex; /* Hacer que los elementos del encabezado sean flexibles */
-    justify-content: space-between; /* Espaciado uniforme entre elementos */
-    align-items: center; /* Centrar verticalmente los elementos */
-}
-
-.header-logo img { 
-    margin-left: 20px;
-    align-self: start;
-    padding-right: 50px;
-}
-
-.header-nav ul {
-    list-style: none;
-    padding-left: 50px;
-    margin: 0;
-}
-
-.header-menu li {
-    display: inline;
-    margin-right: 20px; /* Espaciado entre elementos del menú */
-}
-
-.header-menu-cat a {
-    text-decoration: none;
-    color: black;
-    font-weight:lighter;
-}
-
-.header-menu-cat li :hover {
-    text-decoration: none;
-    color: white;
-    font-weight:lighter;
-    background-color: rgb(26, 198, 126);
-    padding: 10px;
-}
-
-.header-menu-cat li {
-    display: inline;
-    margin-right: 20px; /* Espaciado entre elementos del menú */
-}
-
-.header-menu a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
-.header-menu a:hover {
-    text-decoration: underline;
 }
 
 main {
