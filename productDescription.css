@@ -80,7 +80,7 @@ div > input {
     text-decoration: none;
     color: white;
     font-weight:lighter;
-    background-color: grey;
+    background-color: rgb(26, 198, 126);
     padding: 10px;
 }
 
@@ -353,22 +353,4 @@ c:hover {
     color: gold; /* Cambia el color de la estrella seleccionada a dorado */
 }
 
-/*Map*/
-.container{
-    width: 100%;
-    margin: 0 auto;
-    margin-top:50px;
-  }
-  
-  #map_container{
-    position: relative;
-    height: 100px;
-    width: 100px;
-}
-  #map{
-      height: 0;
-      overflow: hidden;
-      padding-bottom: 22.25%;
-      padding-top: 30px;
-      position: relative;
-  }
+

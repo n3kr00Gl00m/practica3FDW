@@ -15,7 +15,11 @@
 
 <body>
   <!--TITLE-->
-  <h1>I-CHEGA</h1>
+  <div class="header-logo">
+    <a href="http://127.0.0.1:3000/Homepage.html">
+      <img src="logo.png" alt="I-CHEGA"> </a>
+  </div>
+  
 
     <!--FORM-->
     <form>
@@ -23,16 +27,16 @@
     <h2>¿Eres escritor? Mándanos tu libro <span class="badge bg-primary">¡Nuevo! </span> </h2>
 
         <div>
-          <div class="col-md-6">
+          <div>
             <label for="inputTitle">Título</label>
             <input type="text" class="form-control" id="inputTitle">
           </div>
-          <div class="col-md-6">
+          <div>
             <label for="inputAuthor">Autor</label>
             <input type="text" class="form-control" id="inputAuthor" placeholder="Benganito">
           </div>
         </div>
-        <div class="col-md-6">
+        <div>
           <label for="inputGender">Género</label>
           <input type="text" class="form-control" id="inputGender" placeholder="Ejemplo: Ciencia ficción">
         </div>
@@ -41,11 +45,11 @@
           <input type="text" class="form-control" id="inputSinopsis" placeholder="En 1998, en pleno auge de ...">
         </div>
         <div class="row">
-          <div class="col-md-6">
+          <div>
             <label for="inputISBN">ISBN</label>
             <input type="text" class="form-control" id="inputISBN">
           </div>
-          <div class="col-md-4">
+          <div>
             <label for="inputTapa">Tapa</label>
             <select id="inputTapa" class="form-control">
               <option selected>...</option>
@@ -53,17 +57,17 @@
               <option>Tapa dura</option>
             </select>
           </div>
-          <div class="col-md-2">
+          <div>
             <label for="inputPrice">Precio</label>
             <input type="text" class="form-control" id="inputPrice">
           </div>
         </div>
         <div class="row">
-            <div class="col-md-4 mb-3">
+            <div>
               <label for="inputEditor">Editoriales previas</label>
               <input type="text" class="form-control" id="inputEditor">
             </div>
-            <div class="col-md-4 mb-3">
+            <div>
               <label for="inputIdioma">Idioma</label>
               <select id="inputIdioma" class="form-control">
                 <option selected>...</option>
@@ -71,20 +75,17 @@
                 <option>Inglés</option>
               </select>
             </div>
-            <div class="col-md-4 mb-3">
+            <div>
               <label for="inputPlaza">Plaza de edición</label>
               <input type="text" class="form-control" id="inputPlaza">
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <label for="validationCustomUsername">Instagram</label>
-              <div>
-                <span class="input-group-text" id="inputGroupPrepend">@</span>
-              </div>
-              <input type="text" class="form-control" id="validationCustomUsername" placeholder="example" aria-describedby="inputGroupPrepend" required>
+          <div>
+            <label for="inputPlaza">Instagram</label>
+            <input type="text" class="form-control" id="inputPlaza" placeholder="@example">
           </div>
         
-          <div class="form-check">
+          <div>
             <input class="form-check-input" type="checkbox" id="gridCheck">
             <label class="form-check-label" for="gridCheck">
               <i>He leído y acepto los <u>términos de uso</u> de "I-Chega" conforme a la <u>política de privacidad</u>.</i>
@@ -94,15 +95,28 @@
         <div>
             <label for="FormControlFile1">Añade una portada <i class="bi bi-card-image"></i></label>
             <br>
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            <input type="text" class="form-control" id="inputPlaza" placeholder="URL">
         </div>
 
     <!--BUTTONS-->
     <br>
     <button type="submit" class="btn btn-success">Guardar</button>
-    <button type="submit" class="btn btn-danger">Cancelar</button>
+    <a href="http://127.0.0.1:3000/Homepage.html" class="btn btn-danger">
+      Cancelar
+    </a>
     </form>
     </div>
   
 </body>
+
+<footer>
+  <p>
+      © 2023 I-CHIGO - Todos los derechos reservados.
+      [Enlace a Política de Privacidad] | [Enlace a Términos y Condiciones]
+      Dirección: Universidad Rey Juan Carlos, Móstoles, España
+      Teléfono: +34 123 456 789
+      Email: info@ichigo.com
+  </p>
+</footer>
+
 </html>
