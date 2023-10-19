@@ -1,4 +1,10 @@
+
 /*TITLE*/
+
+.big-title {
+    font-size: 27px; 
+}
+
 /*Logo*/
 .header-logo { 
     margin-right: 20px; 
@@ -80,10 +86,15 @@ main {
     margin-left: 20px;
 }
 
-.book-description {
+.book-description-gender {
+    line-height:2em; /*interlineado*/
     flex: 2; /* Hace que la descripción ocupe el 50% del ancho disponible */
 }
 
+.book-description{
+    max-width: 100%;
+    height: auto;
+}
 .buy-now {
     margin-top: 20px;
 }
@@ -127,16 +138,21 @@ table {
 }
 
 /*ficha tecnica---------------------------------------------------------------------------*/
-.ficha-tecnica table {
+.ficha-tecnica {
     width: 100%;
     border-collapse: collapse;
+    align-items: center;
     justify-content: center;
+    margin:center;
+    position: center;
 }
 
 .ficha-tecnica th, .ficha-tecnica td {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    position: center;
+   
 }
 
 .ficha-tecnica th {
@@ -164,7 +180,8 @@ table {
 .compraYa {
     display: flex; /* Hacer que los elementos se muestren en la misma línea */
     align-items: center; /* Centrar verticalmente los elementos */
-    justify-content: left;
+    justify-content: center;
+    text-align:center;
 }
 
 .compraYa button {
@@ -196,15 +213,22 @@ table {
 }
 
 
-/*Etiquetas de genero*/
+/*Etiquetas de genero e isbn*/
 
 .generos {
     padding: 5px;
     background-color: blue;
     color: white;
+    align-text:center;
 }
 
-/*RECOMENDACIONES*/
+.isbn {
+    padding: 5px;
+    background-color: rgba(225, 233, 58, 0.978);
+    color: rgb(0, 0, 0);
+    align-text:center;
+}
+
 /*ELEMENTS*/
 .Book { 
     font-family: helvetica; /*Font*/
@@ -213,7 +237,6 @@ table {
     border-radius: 5px; 
     border: 1px solid #0000004a;
     width: 170px; /*Dimensions*/
-    height: 350px; /*Dimensions*/
     text-align: left;
     cursor: pointer; /*Changes the cursor when hovering over the button*/
     padding: 9px 9px; /*Internal space for button content*/
@@ -222,6 +245,8 @@ table {
     text-overflow: ellipsis; /*Adds ... to overflowing text*/
     position: relative; /*Necessary for internal span positioning*/
     margin: 5px;
+    max-width: 100%;
+    height: auto;
 }
 .Book span {   
     position: absolute; 
@@ -230,17 +255,23 @@ table {
     background-color: #0000004a; 
     top: 246px;
     left: 0;
+    max-width: 100%;
+    height: auto;
 }
 /*Title*/
 a {
     font-weight: bold;
 }
 /*Price*/
-b {
+.book-options-price {
     font-size: 15px;
     font-weight: bold;
-    color: rgb(255, 0, 0);
+    color: rgb(249, 248, 248);
     line-height: 30px;
+    background-color: red;
+    text-align:center;
+    max-width: 100%;
+    height: auto;
 }
 /*Add to cart*/
 c {
@@ -258,6 +289,8 @@ c:hover {
     align-content: center;
     justify-content: center;
     text-align: center;
+    max-width: 100%;
+    height: auto;
 }
 
 /*OPINIONEs*/
@@ -309,4 +342,45 @@ c:hover {
     color: gold; /* Cambia el color de la estrella seleccionada a dorado */
 }
 
+/*--------------------------------------------------------------------------------*/
+/*REVIEW*/
+.comment-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 500px;
+    margin: auto;
+    background-color: #7e7e7b47;
+    color:#000;
+}
 
+.comment {
+    border: 1px solid #eee;
+    padding: 5px;
+    margin: 5px;
+    color:#000;
+}
+.review{
+    text-align: center;
+    color:#000;
+}
+
+/*--------------------------------------------------------------------------------*/
+/*HORIZONTAL LINE*/
+hr { /*For the horizontal line of separation*/
+    border: 1px solid #4d4b4b4c; /* Grosor y color of the line */
+    margin: 20px 0; /* Margin superior and inferior */
+}
+
+/*--------------------------------------------------------------------------------*/
+/*BIG BUTTON*/
+.big-button {
+    padding: 15px 30px; 
+    font-size: 18px;
+    justify-content: center; 
+    text-align: center; /* Centra horizontalmente */
+    flex-direction: row;
+    align-items: center;
+    background-color: #0d42e35e;
+    width: 500px;
+    margin-left: 100px;
+}

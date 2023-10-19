@@ -9,15 +9,18 @@
 </head>
 
 <body>
-    <!--TITLE-->
-    <!--Logo-->
+        <!--TITLE-->
+        <!-------------------------------------------------------------------------------------------->    
+        <!--Logo-->
     <a class="header-logo" href="http://127.0.0.1:3000/Homepage.html"><img src="ImageLogo.jpg" width="80" height="90" alt="I-CHEGA"></a>
-    <!--Menu-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Menu-->
     <button class="Menu">Inicio</button>
     <button class="Menu">Contacto</button>
     <button class="Menu">Catálogo</button>
     <button class="Menu">Ofertas</button>
-    <!--LITERARY GENRES-->
+        <!-------------------------------------------------------------------------------------------->    
+        <!--LITERARY GENRES-->
     <button class="LiteraryGenres">Ficción</button>
     <button class="LiteraryGenres">No ficción</button>
     <button class="LiteraryGenres">Misterio</button>
@@ -28,23 +31,33 @@
     <button class="LiteraryGenres">Historia</button>
     <button class="LiteraryGenres">Autoayuda</button>
     <button class="LiteraryGenres">Poesía</button>
-    <br>
 
+    <hr>
+   
+    
     <main>
         <section class="book-details">
-
+            <!-------------------------------------------------------------------------------------------->    
+            <!--IMAGE-->
             <div class="book-image">
                 <img src="Image8.jpg" alt="Portada del Libro">
             </div>
-
+            <!-------------------------------------------------------------------------------------------->    
+            <!--BOOK DESCRIPTION-->
+            <table>
             <div class="book-description">
-                <h1>STEPHEN KING - LA NIEBLA (The Mist)</h1>
-                <h3>Genero</h3>
-                <span class="generos">Literatura</span>
-                <span class="generos">Fantasia</span>
-                <span class="generos">Terror</span>
-                <span class="generos">Suspense</span>
-                <h3>Sinopsis</h3>
+                <div class="book-description">
+                    <p class="big-title"><u>STEPHEN KING - LA NIEBLA (The Mist)</u></p>                 
+                    <h3>Género:</h3>
+                    <span class="generos">Literatura</span>
+                    <span class="generos">Fantasia</span>
+                    <span class="generos">Terror</span>
+                    <span class="generos">Suspense</span>
+                    <h3>Sinopsis:</h3>
+                </div>
+            
+            <!-------------------------------------------------------------------------------------------->    
+            <!--SINOPSIS-->
                 <p id="descripcion-corta">La trama comienza cuando una extraña y densa niebla envuelve la ciudad de
                     Bridgton, Maine, después de una tormenta eléctrica. David Drayton, el protagonista, se encuentra en
                     un supermercado con su hijo Billy cuando la niebla comienza a cubrir todo. Pronto, los habitantes de
@@ -63,24 +76,32 @@
                     de televisión que se emitió en 2017. La novela es un ejemplo de la habilidad de Stephen King para
                     crear atmósferas aterradoras y explorar los aspectos más oscuros de la psicología humana en
                     situaciones de crisis.</p>
-                <a id="ver-mas" onclick="toggleDescripcion();">Ver más</a>
-                <p>
-                <table>
-                    <tr>
-                        <td class="pBeauty">ISBN:</td>
-                        <td class="td-separate">1234567890</td>
-
-                        <td class="pBeauty">Autor:</td>
-                        <td class="td-separate">King</td>
-
-                    </tr>
-                </table>
-
-                <br>
-
+                <a id="ver-mas" onclick="toggleDescripcion();">Ver más</a><br><br>
+            <!-------------------------------------------------------------------------------------------->    
+            <!--BUTTONS-->
+                    <button class="tapa-tipo"><img src="tick.jpeg" alt="camion" width="20" height="20"> Tapa blanda </button>
+                    <button class="tapa-tipo"><img src="tick.jpeg" alt="camion" width="20" height="20"> Tapa dura </button><br><br>
+                <b> <img src="entrega.png" alt="camion" width="30" height="25"> Recíbelo mañana</b><br><br>  
+            <!-------------------------------------------------------------------------------------------->    
+            <!--ISBN-->  
+                <span class="isbn">ISBN: 1234567890 DEBOLS!LLO</span>
+            </table>
+        </section>
+            
+            <hr> <!--HORIZONTAL LINE-->
+            </div>
+            
+            <!-------------------------------------------------------------------------------------------->    
+            <!--PRICE-->
+            <section class="book-options">
+                <div class="book-options-price">
+                    <h2>19,89€</h2>
+                </div>
+                </section>
+            <!-------------------------------------------------------------------------------------------->    
+            <!--STARS REVIEW AND BUY BUTTON-->
                 <section class="compraYa">
-                    <button><img src="bolsa-de-la-compra.png" alt="bolsa de la compra" width=" 20" height="20">Añadir al
-                        carrito</button>
+                    <button><img src="bolsa-de-la-compra.png" alt="bolsa de la compra" width=" 20" height="20">Añadir al carrito</button>
                     <div>
                         <form>
                             <table class="otras-tablas">
@@ -99,84 +120,59 @@
                                     </p>
                                 </td>
 
-                            </table>
-                        </form>
+                            </table>                            
+                        </form>                           
                     </div>
-
                 </section>
-            </div>
 
-            <section class="book-options">
-                <div class="book-options-price">
-                    <h2>19,89€</h2>
-                </div>
-                <div class="book-options-tapa">
-                    <h4>Elige el tipo de tapa</h4>
-                    <span>
-                        <button class="tapa-tipo"> Tapa blanda </button>
-                    </span>
-                    <span>
-                        <button class="tapa-tipo"> Tapa dura </button>
-                    </span>
-                </div>
-                <div class="book-options-transporte">
-                    <h4>Elige el tipo de transporte</h4>
-                    <span>
-                        <button class="tapa-tipo">
-                            <img src="camion-de-envio.png" alt="camion" width="20" height="20">
-                            Estandar
-                        </button>
-                        <button class="tapa-tipo">
-                            <img src="entrega-rapida.png" alt="camion-express" width="20" height="20">
-                            Express
-                        </button>
-                    </span>
-                </div>
-            </section>
 
-        </section>
-        <section class="secciones-secundarias">
-            <section class="recomendaciones">
-                <h2>Porque has leido "La niebla - Stephen King" te recomendamos ...</h2>
-                <span>
-                    <button class="Book"> <!--Element4-->
-                        <div><img src="Image4.jpg" width="150" height="225" /></div>
-                        <span></span>
-                        <div><a><br>RETORNO DE LAS<br>ESTRELLAS</a></div>
-                        <div>Stanisław Lem</div>
-                        <div><b>13.77€</b></div>
-                        <div>
-                            <c>Add to cart</c>
-                        </div>
-                    </button>
-                </span>
-                <span>
-                    <button class="Book"> <!--Element2-->
-                        <div><img src="Image2.jpg" width="150" height="225" /></div>
-                        <span></span>
-                        <div><a><br>EL PALACIO DE<br>LA MEDIA NOCHE</a></div>
-                        <div>Carlos Ruiz Zafón</div>
-                        <div><b>9.45€</b></div>
-                        <div>
-                            <c>Add to cart</c>
-                        </div>
-                    </button>
-                </span>
-                <span>
-                    <button class="Book"> <!--Element5-->
-                        <div><img src="Image5.jpg" width="150" height="225" /></div>
-                        <span></span>
-                        <div><a><br>INVISIBLE<br><br></a></div>
-                        <div>Eloy Moreno</div>
-                        <div><b>15.15€</b></div>
-                        <div>
-                            <c>Add to cart</c>
-                        </div>
-                    </button>
-                </span>
-            </section>
+                
+            <!-------------------------------------------------------------------------------------------->    
+            <!--RECOMENDATIONS-->
+                <section class="secciones-secundarias">
+                    <section>
+                        <h2>Porque has leído "La niebla - Stephen King" te recomendamos ...</h2>
+                        <span>
+                            <button class="Book"> <!--Element1-->
+                                <div><img src="Image4.jpg" width="150" height="225" /></div>
+                                <span></span>
+                                <div><a><br>RETORNO DE LAS<br>ESTRELLAS</a></div>
+                                <div>Stanisław Lem</div>
+                                <div><b>13.77€</b></div>
+                                <div>
+                                    <c>Add to cart</c>
+                                </div>
+                            </button>
+                        </span>
+                        <span>
+                            <button class="Book"> <!--Element2-->
+                                <div><img src="Image2.jpg" width="150" height="225" /></div>
+                                <span></span>
+                                <div><a><br>EL PALACIO DE<br>LA MEDIA NOCHE</a></div>
+                                <div>Carlos Ruiz Zafón</div>
+                                <div><b>9.45€</b></div>
+                                <div>
+                                    <c>Add to cart</c>
+                                </div>
+                            </button>
+                        </span>
+                        <span>
+                            <button class="Book"> <!--Element3-->
+                                <div><img src="Image5.jpg" width="150" height="225" /></div>
+                                <span></span>
+                                <div><a><br>INVISIBLE<br><br></a></div>
+                                <div>Eloy Moreno</div>
+                                <div><b>15.15€</b></div>
+                                <div>
+                                    <c>Add to cart</c>
+                                </div>
+                            </button>
+                        </span>
+                    </section>
+            <!-------------------------------------------------------------------------------------------->    
+            <!--TECNICAL INFORMATION-->            
+        <h2><u>Ficha tecnica del libro:</u></h2>
             <section class="ficha-tecnica">
-                <h2>Ficha tecnica del libro</h2>
                 <table>
                     <tr>
                         <td>
@@ -201,10 +197,7 @@
                                     <th>ISBN:</th>
                                     <td>9788497590488</td>
                                 </tr>
-                            </table>
-                        </td>
-                        <td>
-                            <table>
+                            
                                 <tr>
                                     <th>Año de edición:</th>
                                     <td>2002</td>
@@ -231,12 +224,10 @@
                                 </tr>
                             </table>
                         </td>
-                    </tr>
                 </table>
-            </section>
         </section>
         <section class="Valoraciones-personas">
-            <h3>Valoraciones</h3>
+            <h2><u>Valoraciones:</h2>
             <div class="opinion">
                 <span class="persona">
                     <img src="autoestima-valoracion-personal.webp" alt="persona-valoracion">
@@ -252,17 +243,17 @@
                         </tr>
                         <tr>
                             <td>
-                                <p class="clasificacion">
-                                    <input id="radio1" type="radio" name="estrellas" value="5"><!--
-                                    --><label for="radio1">★</label><!--
-                                    --><input id="radio2" type="radio" name="estrellas" value="4"><!--
-                                    --><label for="radio2">★</label><!--
-                                    --><input id="radio3" type="radio" name="estrellas" value="3"><!--
-                                    --><label for="radio3">★</label><!--
-                                    --><input id="radio4" type="radio" name="estrellas" value="2"><!--
-                                    --><label for="radio4">★</label><!--
-                                    --><input id="radio5" type="radio" name="estrellas" value="1"><!--
-                                    --><label for="radio5">★</label>
+                                <p class="clasificación">
+                                    <input id="radio6" type="radio" name="estrellas" value="5"><!--
+                                    --><label for="radio6">★</label><!--
+                                    --><input id="radio7" type="radio" name="estrellas" value="4"><!--
+                                    --><label for="radio7">★</label><!--
+                                    --><input id="radio8" type="radio" name="estrellas" value="3"><!--
+                                    --><label for="radio8">★</label><!--
+                                    --><input id="radio9" type="radio" name="estrellas" value="2"><!--
+                                    --><label for="radio9">★</label><!--
+                                    --><input id="radio10" type="radio" name="estrellas" value="1"><!--
+                                    --><label for="radio10">★</label>
                                 </p>
                             </td>
                         </tr>
@@ -321,6 +312,26 @@
             }
         }
     </script>
+        <!-------------------------------------------------------------------------------------------->    
+        <!--REVIEWS-->
+<div class="comment-box">
+    <h2>Deja un comentario:</h2>
+    <form action="#" method="post">
+        <label for="nombre">(*) Nombre:</label>
+        <input type="text" id="nombre" name="nombre" cols="50"><br><br>
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" name="comentario" rows="7" cols="50"></textarea><br><br>
+        <input type="submit" value="Guardar">
+    </form>
+</div><br><br>
+
+        <!-------------------------------------------------------------------------------------------->    
+        <!--BUTTONS-->
+    <button class="big-button">Borrar</button>
+    <button class="big-button">Editar</button>
+        <a href="http://127.0.0.1:3000/Homepage.html" class="btn btn-danger">
+            <button class="big-button">Ver todos los elementos</button>
+        </a>
 
 </body>
 

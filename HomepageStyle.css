@@ -33,11 +33,12 @@ body {
     border-radius: 5px;
     outline: 1px solid #000;  
     padding: 10px 10px 10px 10px;
-    margin: 20px; 
-    flex: 1;
+    position: center;
+    margin: auto; 
     display: flex;
+    flex: 1;
     text-align: left;
-    overflow: hidden; /*Hides any overflowing text*/
+    overflow: hidden; /*Esconde cualquier cosa que se superponga*/
 }
 .boton-lupa {
     border-radius: 3px; 
@@ -151,4 +152,9 @@ footer {
     background-color: #000;
     padding: 20px;
     color: white
+}
+
+/*Column*/
+.col {
+    padding-right: 300px; 
 }
