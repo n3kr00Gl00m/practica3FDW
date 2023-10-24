@@ -1,16 +1,17 @@
-
-/*TITLE*/
-
-.big-title {
-    font-size: 27px; 
+/*BODY*/
+body {
+    background-color: white;
+    text-align: center;
+    font-family: helvetica; /*Font*/
 }
 
-/*Logo*/
+/*LOGO*/
 .header-logo { 
     margin-right: 20px; 
     vertical-align: middle;  
 }
-/*Menu*/
+
+/*MENU*/
 .Menu {
     font-weight: bold;
     font-family: helvetica;
@@ -26,6 +27,7 @@
     background-color: rgba(30, 122, 93, 0.678);
     color: white;
 }
+
 /*LITERARY GENRES*/
 .LiteraryGenres {
     font-family: helvetica;
@@ -43,22 +45,9 @@
 }
 
 
-
-
-
-body {
-    background-color: #fff; /* Fondo blanco */
-    color: #000; /* Texto negro */
-    font-family: Arial, sans-serif; /* Tipo de fuente predeterminado */
-}
-/*BODY*/
-footer {
-
-    background-color: #000;
-    padding: 20px;
-}
-footer > p {
-    color: white
+/*TITLE*/
+.big-title {
+    font-size: 27px; 
 }
 
 main {
@@ -229,55 +218,53 @@ table {
     align-text:center;
 }
 
-/*ELEMENTS*/
-.Book { 
-    font-family: helvetica; /*Font*/
+
+.book { 
+    font-family: helvetica; 
     font-size: 13px;
     background-color: white;
     border-radius: 5px; 
     border: 1px solid #0000004a;
     width: 170px; /*Dimensions*/
+    height: 350px; /*Dimensions*/
     text-align: left;
-    cursor: pointer; /*Changes the cursor when hovering over the button*/
-    padding: 9px 9px; /*Internal space for button content*/
+    cursor: pointer; 
+    padding: 9px 9px; 
     white-space: nowrap; /*Avoid text line breaks*/
-    overflow: hidden; /*Hides any overflowing text*/
-    text-overflow: ellipsis; /*Adds ... to overflowing text*/
+    overflow: hidden; 
     position: relative; /*Necessary for internal span positioning*/
     margin: 5px;
-    max-width: 100%;
-    height: auto;
 }
-.Book span {   
+.book span {   
     position: absolute; 
     width: 170px; 
     height: 1px; 
     background-color: #0000004a; 
     top: 246px;
     left: 0;
-    max-width: 100%;
-    height: auto;
+}
+div > del {
+    font-size: 12px;
+    color: rgba(17, 166, 17, 0.878);
 }
 /*Title*/
-a {
+.bookTitle {
     font-weight: bold;
+    color: black;
+    text-decoration: none;
 }
 /*Price*/
-.book-options-price {
+.bookPrice {
     font-size: 15px;
     font-weight: bold;
-    color: rgb(249, 248, 248);
+    color: rgb(255, 0, 0);
     line-height: 30px;
-    background-color: red;
-    text-align:center;
-    max-width: 100%;
-    height: auto;
 }
 /*Add to cart*/
-c {
-    color:rgb(0, 0, 255);
+.addToCart {
+    color:rgb(0, 0, 255);   
 }
-c:hover {
+.addToCart:hover {
     font-size: 15px;
     color: rgba(0, 106, 255, 0.723);
 }
@@ -374,13 +361,28 @@ hr { /*For the horizontal line of separation*/
 /*--------------------------------------------------------------------------------*/
 /*BIG BUTTON*/
 .big-button {
-    padding: 15px 30px; 
-    font-size: 18px;
-    justify-content: center; 
-    text-align: center; /* Centra horizontalmente */
-    flex-direction: row;
-    align-items: center;
+    text-decoration: underline;
+    border: 2px solid #0000004a;
+    border-radius: 5px; /*Customize the level of corner roundness*/
+    padding: 20px 20px;
+    font-family: helvetica;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
     background-color: #0d42e35e;
-    width: 500px;
-    margin-left: 100px;
+    cursor: pointer;  
 }
+.big-button:hover {
+    background-color: rgba(30, 71, 122, 0.678);
+    color: white;
+}
+
+/*--------------------------------------------------------------------------------*/
+/*FOOTER*/
+footer {
+    margin-top: 40px;
+    background-color: #000;
+    padding: 20px;
+    color: white
+}
+
