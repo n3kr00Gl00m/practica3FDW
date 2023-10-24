@@ -372,3 +372,28 @@ c:hover {
       padding-top: 30px;
       position: relative;
   }
+/* Estilos para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+    /* Ajusta los estilos para que se adapten a pantallas más pequeñas */
+    .header-nav ul {
+        padding-left: 0; /* Elimina el relleno izquierdo en el menú */
+    }
+
+    .header-menu-cat li {
+        margin-right: 10px; /* Reduce el espacio entre elementos del menú */
+    }
+
+    .book-details {
+        flex-direction: column; /* Cambia el diseño de elementos secundarios a columna */
+    }
+
+    .book-image {
+        margin-right: 0; /* Elimina el margen derecho de la imagen */
+    }
+
+    .book-description {
+        margin-top: 20px; /* Agrega espacio entre la imagen y la descripción */
+    }
+
+    /* Agrega más ajustes de estilo para pantallas más pequeñas según sea necesario */
+}
