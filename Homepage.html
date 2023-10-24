@@ -10,146 +10,240 @@
 </head>
 
 <body>
-    <!--TITLE-->
-    <header >
-        <div class="header">
-            <div class="header-logo">
-                <img src="logo.png" alt="I-CHEGA">
-            </div>
-            <div class="buscador">
-                <input type="text" placeholder="Buscar por autor, titulo, ISBN...">
-            </div>
-            <button class="boton-lupa">Buscar</button>
-            <nav class="header-nav">
-                <ul class="header-menu">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Catálogo</a></li>
-                    <li><a href="#">Ofertas</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>           
-        </div>
+    <!--LOGO-->
+    <img class="logo" src="ImageLogo.jpg" width="80" height="90" alt="I-CHEGA" />
+    <!--<alt> describes an image-->
 
-        <nav class="header-nav">
-            <ul class="header-menu-cat">
-                <li><a href="#">Ficción</a></li>
-                <li><a href="#">No ficción</a></li>
-                <li><a href="#">Misterio</a></li>
-                <li><a href="#">Ciencia ficción</a></li>
-                <li><a href="#">Romance</a></li>
-                <li><a href="#">Fantasía</a></li>
-                <li><a href="#">Biografía</a></li>
-                <li><a href="#">Historia</a></li>
-                <li><a href="#">Autoayuda</a></li>
-                <li><a href="#">Poesía</a></li>
-            </ul>
-        </nav>
-    </header>
-    <br>
-    <br>
+    <!--MENU-->
+    <button class="menu">Inicio</button>
+    <button class="menu">Contacto</button>
+    <button class="menu">Catálogo</button>
+    <button class="menu">Ofertas</button>
+
+    <!--SEARCHER-->
+    <div class="buscador">
+        <button class="botonLupa">Buscar</button>
+        <input type="text" placeholder="Buscar por autor, titulo, ISBN...">
+        <!--<type> defines a text field-->
+        <!--<placeholder> is used to provide a hint of what the user is expected to enter in that space-->
+    </div>
+
+    <!--LITERARY GENRES-->
+    <form>
+        <!--<form> represents a section of a document that contains interactive controls-->
+        <button class="literaryGenres">Ficción</button>
+        <button class="literaryGenres">No ficción</button>
+        <button class="literaryGenres">Misterio</button>
+        <button class="literaryGenres">Ciencia ficción</button>
+        <button class="literaryGenres">Romance</button>
+        <button class="literaryGenres">Fantasía</button>
+        <button class="literaryGenres">Biografía</button>
+        <button class="literaryGenres">Historia</button>
+        <button class="literaryGenres">Autoayuda</button>
+        <button class="literaryGenres">Poesía</button>
+    </form>
+    <br> <!--<br> produces a line break-->
     <br>
 
     <!--ELEMENTS-->
-    <button class="Book"> <!--Element1-->
-        <div><img src="Image1.jpg" width="150" height="225" /></div> <!--Image-->
+    <button class="book"> <!--Element1-->
+        <a href="http://127.0.0.1:3000/productDescription.html"><img src="Image1.jpg" width="150" height="225" /></a> <!--Image-->
+        <!--<a> creates a link to other internet pages, files...-->
         <span></span> <!--Line-->
-        <div><a><br>HARRY POTTER<br>COLECCIÓN COMPLETA</a></div> <!--Title-->
+        <div> <!--Title-->
+            <a class="bookTitle" href="http://127.0.0.1:3000/productDescription.html">
+                <br>HARRY POTTER<br>COLECCIÓN COMPLETA
+            </a>
+        </div>
         <div>J.K. Rowling</div> <!--Author-->
-        <div><b>80.68€</b></div> <!--Price-->
-        <div>
-            <c>Add to cart</c>
-        </div> <!--Add to cart-->
+        <div class="bookPrice">80.68€</div> <!--Price-->
+        <div class="addToCart">Añadir a la cesta</div> <!--Add to cart-->
     </button>
-    <button class="Book"> <!--Element2-->
-        <div><img src="Image2.jpg" width="150" height="225" /></div>
+    <button class="book"> <!--Element2-->
+        <a href="http://127.0.0.1:3000/productDescription.html"><img src="Image2.jpg" width="150" height="225" /></a>
         <span></span>
-        <div><a><br>EL PALACIO DE<br>LA MEDIA NOCHE</a></div>
+        <div>
+            <a class="bookTitle" href="http://127.0.0.1:3000/productDescription.html">
+                <br>EL PALACIO DE<br>LA MEDIA NOCHE
+            </a>
+        </div>
         <div>Carlos Ruiz Zafón</div>
-        <div><b>9.45€</b></div>
-        <div>
-            <c>Add to cart</c>
-        </div>
+        <div class="bookPrice">9.45€</div>
+        <div class="addToCart">Añadir a la cesta</div>
     </button>
-    <button class="Book"> <!--Element3-->
-        <div><img src="Image3.jpg" width="150" height="225" /></div>
+    <button class="book"> <!--Element3-->
+        <a href="http://127.0.0.1:3000/productDescription.html"><img src="Image3.jpg" width="150" height="225" /></a>
         <span></span>
-        <div><a><br>POETA EN NUEVA<br>YORK</a></div>
+        <div>
+            <a class="bookTitle" href="http://127.0.0.1:3000/productDescription.html">
+                <br>POETA EN NUEVA<br>YORK
+            </a>
+        </div>
         <div>Federico García Lorca</div>
-        <div><b>9.45€</b></div>
-        <div>
-            <c>Add to cart</c>
-        </div>
+        <div class="bookPrice">9.45€</div>
+        <div class="addToCart">Añadir a la cesta</div>
     </button>
-    <button class="Book"> <!--Element4-->
-        <div><img src="Image4.jpg" width="150" height="225" /></div>
+    <button class="book"> <!--Element4-->
+        <a href="http://127.0.0.1:3000/productDescription.html"><img src="Image4.jpg" width="150" height="225" /></a>
         <span></span>
-        <div><a><br>RETORNO DE LAS<br>ESTRELLAS</a></div>
+        <div>
+            <a class="bookTitle" href="http://127.0.0.1:3000/productDescription.html">
+                <br>RETORNO DE LAS<br>ESTRELLAS
+            </a>
+        </div>
         <div>Stanisław Lem</div>
-        <div><b>13.77€</b></div>
-        <div>
-            <c>Add to cart</c>
-        </div>
+        <div class="bookPrice">13.77€</div>
+        <div class="addToCart">Añadir a la cesta</div>
     </button>
-    <button class="Book"> <!--Element5-->
-        <div><img src="Image5.jpg" width="150" height="225" /></div>
+    <button class="book"> <!--Element5-->
+        <a href="http://127.0.0.1:3000/productDescription.html"><img src="Image5.jpg" width="150" height="225" /></a>
         <span></span>
-        <div><a><br>INVISIBLE<br><br></a></div>
+        <div>
+            <a class="bookTitle" href="http://127.0.0.1:3000/productDescription.html">
+                <br>INVISIBLE<br><br>
+            </a>
+        </div>
         <div>Eloy Moreno</div>
-        <div><b>15.15€</b></div>
-        <div>
-            <c>Add to cart</c>
-        </div>
+        <div class="bookPrice">15.15€</div>
+        <div class="addToCart">Añadir a la cesta</div>
     </button>
-    <button class="Book"> <!--Element6-->
-        <div><img src="Image6.jpg" width="150" height="225" /></div>
+    <button class="book"> <!--Element6-->
+        <a href="http://127.0.0.1:3000/productDescription.html"><img src="Image6.jpg" width="150" height="225" /></a>
         <span></span>
-        <div><a><br>HÁBITOS<br>ATÓMICOS</a></div>
+        <div>
+            <a class="bookTitle" href="http://127.0.0.1:3000/productDescription.html">
+                <br>HÁBITOS<br>ATÓMICOS
+            </a>
+        </div>
         <div>James Clear</div>
-        <div><b>18.90€</b></div>
-        <div>
-            <c>Add to cart</c>
-        </div>
+        <div class="bookPrice">18.90€ <del>20.75€</del></div>
+        <div class="addToCart">Añadir a la cesta</div>
     </button>
-    <button class="Book"> <!--Element7-->
-        <div><img src="Image7.jpg" width="150" height="225" /></div>
+    <button class="book"> <!--Element7-->
+        <a href="http://127.0.0.1:3000/productDescription.html"><img src="Image7.jpg" width="150" height="225" /></a>
         <span></span>
-        <div><a><br>LA FUNDACIÓN<br><br></a></div>
+        <div>
+            <a class="bookTitle" href="http://127.0.0.1:3000/productDescription.html">
+                <br>LA FUNDACIÓN<br><br>
+            </a>
+        </div>
         <div>Antonio Buero Vallejo</div>
-        <div><b>9.45€</b></div>
-        <div>
-            <c>Add to cart</c>
-        </div>
+        <div class="bookPrice">9.45€</div>
+        <div class="addToCart">Añadir a la cesta</div>
     </button>
-    <button class="Book"> <!--Element8-->
-        <div><img src="Image8.jpg" width="150" height="225" /></div>
+    <button class="book"> <!--Element8-->
+        <a href="http://127.0.0.1:3000/productDescription.html"><img src="Image8.jpg" width="150" height="225" /></a>
         <span></span>
-        <div><a><br>LA NIEBLA<br><br></a></div>
+        <div>
+            <a class="bookTitle" href="http://127.0.0.1:3000/productDescription.html">
+                <br>LA NIEBLA<br><br>
+            </a>
+        </div>
         <div>Stephen King</div>
-        <div><b>11.35€</b></div>
-        <div>
-            <c>Add to cart</c>
-        </div>
+        <div class="bookPrice">11.35€</div>
+        <div class="addToCart">Añadir a la cesta</div>
     </button>
-    <button class="Book"> <!--Element9-->
-        <div><img src="Image9.jpg" width="150" height="225" /></div>
+    <button class="book"> <!--Element9-->
+        <a href="http://127.0.0.1:3000/productDescription.html"><img src="Image9.jpg" width="150" height="225" /></a>
         <span></span>
-        <div><a><br>LOBEZNO: EL<br>VIEJO LOGAN<br></a></div>
+        <div>
+            <a class="bookTitle" href="http://127.0.0.1:3000/productDescription.html">
+                <br>LOBEZNO: EL<br>VIEJO LOGAN<br>
+            </a>
+        </div>
         <div>Mark Millar, Steve Mcniven</div>
-        <div><b>20.85€</b></div>
-        <div>
-            <c>Add to cart</c>
-        </div>
+        <div class="bookPrice">20.85€ <del>22.50€</del></div>
+        <div class="addToCart">Añadir a la cesta</div>
     </button>
-    <button class="Book"> <!--Element10-->
-        <div><img src="Image10.jpg" width="150" height="225" /></div>
+    <button class="book"> <!--Element10-->
+        <a href="http://127.0.0.1:3000/productDescription.html"><img src="Image10.jpg" width="150" height="225" /></a>
         <span></span>
-        <div><a><br>CIEN AÑOS DE<br>SOLEDAD<br></a></div>
-        <div>Gabriel García Márquez</div>
-        <div><b>9.95€</b></div>
         <div>
-            <c>Add to cart</c>
+            <a class="bookTitle" href="http://127.0.0.1:3000/productDescription.html">
+                <br>CIEN AÑOS DE<br>SOLEDAD<br>
+            </a>
         </div>
+        <div>Gabriel García Márquez</div>
+        <div class="bookPrice">9.95€</div>
+        <div class="addToCart">Añadir a la cesta</div>
     </button>
+    <button class="book"> <!--Element11-->
+        <a href="http://127.0.0.1:3000/productDescription.html"><img src="Image11.jpg" width="150" height="225" /></a>
+        <span></span>
+        <div>
+            <a class="bookTitle" href="http://127.0.0.1:3000/productDescription.html">
+                <br>LA BLIBLIOTECA DE<br>LA MEDIA NOCHE<br>
+            </a>
+        </div>
+        <div>Matt Haig</div>
+        <div class="bookPrice">21.37€</div>
+        <div class="addToCart">Añadir a la cesta</div>
+    </button>
+    <button class="book"> <!--Element12-->
+        <a href="http://127.0.0.1:3000/productDescription.html"><img src="Image12.jpg" width="150" height="225" /></a>
+        <span></span>
+        <div>
+            <a class="bookTitle" href="http://127.0.0.1:3000/productDescription.html">
+                <br>MONET: THE TRIUMPH<br>OF IMPRESSIONISM<br>
+            </a>
+        </div>
+        <div>Daniel Wildenstein</div>
+        <div class="bookPrice">15.20€ <del>18.55€</del></div>
+        <div class="addToCart">Añadir a la cesta</div>
+    </button>
+    <button class="book"> <!--Element13-->
+        <a href="http://127.0.0.1:3000/productDescription.html"><img src="Image13.jpg" width="150" height="225" /></a>
+        <span></span>
+        <div>
+            <a class="bookTitle" href="http://127.0.0.1:3000/productDescription.html">
+                <br>MARINA<br><br>
+            </a>
+        </div>
+        <div>Carlos Ruiz Zafón</div>
+        <div class="bookPrice">9.45€</div>
+        <div class="addToCart">Añadir a la cesta</div>
+    </button>
+    <button class="book"> <!--Element14-->
+        <a href="http://127.0.0.1:3000/productDescription.html"><img src="Image14.jpg" width="150" height="225" /></a>
+        <span></span>
+        <div>
+            <a class="bookTitle" href="http://127.0.0.1:3000/productDescription.html">
+                <br>VEINTE MIL LEGUAS DE<br>VIAJE SUBMARINO<br>
+            </a>
+        </div>
+        <div>Julio Verne</div>
+        <div class="bookPrice">14.96€</div>
+        <div class="addToCart">Añadir a la cesta</div>
+    </button>
+    <button class="book"> <!--Element15-->
+        <a href="http://127.0.0.1:3000/productDescription.html"><img src="Image15.jpg" width="150" height="225" /></a>
+        <span></span>
+        <div>
+            <a class="bookTitle" href="http://127.0.0.1:3000/productDescription.html">
+                <br>LOS PACIENTES DEL<br>DOCTOR GARCÍA<br>
+            </a>
+        </div>
+        <div>Almudena Grandes</div>
+        <div class="bookPrice">21.75 <del>24.50€</del></div>
+        <div class="addToCart">Añadir a la cesta</div>
+    </button>
+    <br>
+
+    <!--CREATE NEW ITEM-->
+    <!--The “Crear nuevo elemento” button takes you to the new item page-->
+    <a class="newButton" href="http://127.0.0.1:3000/Formulario.html">Crear nuevo elemento</a>
+
+    <!--FOOTER-->
+    <!--Footer is used to represent the footer section of a web document-->
+    <footer>
+        <p>
+            © 2023 I-CHIGO - Todos los derechos reservados.
+            [Enlace a Política de Privacidad] | [Enlace a Términos y Condiciones]
+            Dirección: Universidad Rey Juan Carlos, Móstoles, España
+            Teléfono: +34 123 456 789
+            Email: info@ichigo.com
+        </p>
+    </footer>
 
 </body>
 
