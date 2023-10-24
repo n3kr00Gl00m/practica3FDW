@@ -70,9 +70,21 @@ main {
     height: auto;
 }
 
-.book-options {
+.s {
     flex: 1;
     margin-left: 20px;
+}
+
+.book-options-price {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    color: rgb(249, 248, 248);
+    line-height: 30px;
+    background-color: red;
+    text-align:center;
+    max-width: 100%;
+    height: auto;
 }
 
 .book-description-gender {
