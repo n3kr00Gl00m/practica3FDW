@@ -322,32 +322,39 @@
         <form id="contact" action="" method="post">
           <h3>Deja tu comentario</h3>
           <fieldset>
-            <input placeholder="Nombre" type="text" tabindex="1" required autofocus>
+            <input placeholder="Nombre" type="text" tabindex="1">
           </fieldset>
           <fieldset>
-            <input placeholder="Email" type="email" tabindex="2" required>
+            <input placeholder="Email" type="email" tabindex="2">
           </fieldset>
           <fieldset>
-            <textarea placeholder="Escribe aquí tu comentario...." tabindex="5" required></textarea>
+            <textarea placeholder="Escribe aquí tu comentario...." tabindex="5"></textarea>
           </fieldset>
           <fieldset>
             <div class="ec-stars-wrapper">
-                <a  data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-                <a  data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-                <a  data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-                <a  data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-                <a  data-value="5" title="Votar con 5 estrellas">&#9733;</a>
-            </div>
-            <noscript>Necesitas tener habilitado javascript para poder votar</noscript>
-            
+                <input type="radio" name="rating" id="star1" data-value="1">
+                <label for="star1" title="Votar con 1 estrella">&#9733;</label>
+                
+                <input type="radio" name="rating" id="star2" data-value="2">
+                <label for="star2" title="Votar con 2 estrellas">&#9733;</label>
+                
+                <input type="radio" name="rating" id="star3" data-value="3">
+                <label for="star3" title="Votar con 3 estrellas">&#9733;</label>
+                
+                <input type="radio" name="rating" id="star4" data-value="4">
+                <label for="star4" title="Votar con 4 estrellas">&#9733;</label>
+                
+                <input type="radio" name="rating" id="star5" data-value="5">
+                <label for="star5" title="Votar con 5 estrellas">&#9733;</label>
+              </div>
                        
           <fieldset>          
-            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
+            <a name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</a>
             <!-- Botones adicionales -->
             <p>
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Editar</button>
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Borrar</button>
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Ver todo</button>
+                <a name="submit" type="submit" id="contact-submit" data-submit="...Sending">Editar</a>
+                <a name="submit" type="submit" id="contact-submit" data-submit="...Sending">Borrar</a>
+                <a name="submit" type="submit" id="contact-submit" data-submit="...Sending" href="Homepage.html"> Ver todo</a>
             </p>
           </fieldset>
         </form>
@@ -383,37 +390,22 @@
             }
         }
 
-        // Función para cambiar el color al hacer clic en una estrella
-        function changeColor(clickedLabel) {
-            const labels = document.querySelectorAll('.clasificacion-dos label');
-            labels.forEach(label => label.classList.remove('colored'));
-            clickedLabel.classList.add('colored');
-        }
+        const stars = document.querySelectorAll('.ec-stars-wrapper input');
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const stars = document.querySelectorAll('.ec-stars-wrapper a');
-            let userRating = 0; // Esta variable almacenará la calificación del usuario
-
-            stars.forEach(star => {
-                star.addEventListener('click', function() {
-                    const value = this.getAttribute('data-value');
-                    userRating = value; // Almacena la calificación del usuario
-                    applyUserRating();
-                });
-            });
-
-            // Función para aplicar la calificación del usuario y mantener el color
-            function applyUserRating() {
-                for (let i = 0; i < stars.length; i++) {
-                    if (i < userRating) {
-                        stars[i].classList.add('selected');
-                    } else {
-                        stars[i].classList.remove('selected');
-                    }
-                }
+        stars.forEach((star) => {
+        star.addEventListener('change', (event) => {
+            const selectedValue = event.target.getAttribute('data-value');
+            
+            // Recorre las estrellas y cambia su color en función del valor seleccionado
+            stars.forEach((s) => {
+            if (s.getAttribute('data-value') <= selectedValue) {
+                s.nextElementSibling.style.color = 'rgb(39, 130, 228)'; // Color azul
+            } else {
+                s.nextElementSibling.style.color = '#888'; // Color gris
             }
+            });
         });
-
+        });
     </script>
 </body>
 
