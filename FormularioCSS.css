@@ -1,0 +1,20 @@
+body {
+    margin-left: 50px;
+}
+
+form {
+    padding-bottom: 50px
+}
+
+footer {
+    padding-top: 50px;
+    margin-top: 40px;
+    background-color: #000;
+    padding: 20px;
+    color: white
+}
+
+.tipo-tapa , .condiciones{
+    margin-top: 20px;
+    margin-top: 10px;
+}

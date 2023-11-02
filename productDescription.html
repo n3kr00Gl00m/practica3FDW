@@ -338,16 +338,16 @@
                 <a  data-value="4" title="Votar con 4 estrellas">&#9733;</a>
                 <a  data-value="5" title="Votar con 5 estrellas">&#9733;</a>
             </div>
-            
+            <noscript>Necesitas tener habilitado javascript para poder votar</noscript>
             
                        
           <fieldset>          
-            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Guardar</button>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
             <!-- Botones adicionales -->
             <p>
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Editar</button>
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Borrar</button>
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Ver todo</button>
+                <a name="submit" type="submit" id="contact-submit" data-submit="...Sending">Editar</a>
+                <a name="submit" type="submit" id="contact-submit" data-submit="...Sending">Borrar</a>
+                <a name="submit" type="submit" id="contact-submit" data-submit="...Sending" href="Homepage.html"> Ver todo</a>
             </p>
           </fieldset>
         </form>
@@ -383,37 +383,22 @@
             }
         }
 
-        // Función para cambiar el color al hacer clic en una estrella
-        function changeColor(clickedLabel) {
-            const labels = document.querySelectorAll('.clasificacion-dos label');
-            labels.forEach(label => label.classList.remove('colored'));
-            clickedLabel.classList.add('colored');
-        }
+        const stars = document.querySelectorAll('.ec-stars-wrapper input');
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const stars = document.querySelectorAll('.ec-stars-wrapper a');
-            let userRating = 0; // Esta variable almacenará la calificación del usuario
-
-            stars.forEach(star => {
-                star.addEventListener('click', function() {
-                    const value = this.getAttribute('data-value');
-                    userRating = value; // Almacena la calificación del usuario
-                    applyUserRating();
-                });
-            });
-
-            // Función para aplicar la calificación del usuario y mantener el color
-            function applyUserRating() {
-                for (let i = 0; i < stars.length; i++) {
-                    if (i < userRating) {
-                        stars[i].classList.add('selected');
-                    } else {
-                        stars[i].classList.remove('selected');
-                    }
-                }
+        stars.forEach((star) => {
+        star.addEventListener('change', (event) => {
+            const selectedValue = event.target.getAttribute('data-value');
+            
+            // Recorre las estrellas y cambia su color en función del valor seleccionado
+            stars.forEach((s) => {
+            if (s.getAttribute('data-value') <= selectedValue) {
+                s.nextElementSibling.style.color = 'rgb(39, 130, 228)'; // Color azul
+            } else {
+                s.nextElementSibling.style.color = '#888'; // Color gris
             }
+            });
         });
-
+        });
     </script>
 </body>
 
