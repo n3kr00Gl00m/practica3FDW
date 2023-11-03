@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
 
+/*----------------------------------------------------------------------------------------*/
 /*BODY*/
 body {
     background-color: white;
@@ -7,29 +8,36 @@ body {
     font-family: helvetica; /*Font*/
 }
 
-/*LOGO*/
-.header-logo { 
-    margin-right: 20px; 
-    vertical-align: middle;  
+/*----------------------------------------------------------------------------------------*/
+/*TO CENTER ALL ELEMENTS OF THE PAGE*/
+main { 
+    max-width: 900px; 
+    margin: 0 auto; /* CENTER CONTENT OF PAGE */
+    padding: 20px;
 }
 
+/*----------------------------------------------------------------------------------------*/
 /*MENU*/
 .Menu {
     font-weight: bold;
-    font-family: helvetica;
-    font-size: 16px;
-    text-decoration: underline;
-    background-color: white;
-    border-radius: 5px; 
-    border: 1px solid white;
+    font-size: 16px;  
     cursor: pointer;
-    padding: 5px 5px;  
+    padding: 3px 3px;
+    margin-bottom: 50px;  
 }
-.Menu:hover {
+.background {
     background-color: rgba(30, 122, 93, 0.678);
-    color: white;
 }
 
+
+/*----------------------------------------------------------------------------------------*/
+/*LOGO*/
+.logo{
+    align-content: left;
+    float: left;
+}
+
+/*----------------------------------------------------------------------------------------*/
 /*LITERARY GENRES*/
 .LiteraryGenres {
     font-family: helvetica;
@@ -46,25 +54,55 @@ body {
     color: white;
 }
 
+/*--------------------------------------------------------------------------------*/
+/*SEARCHER*/
+.buscador {
+    border: 1px;
+    border-radius: 5px; /*Customize the level of corner roundness*/
+    outline: 1px solid #000;  
+    padding: 10px 10px; 
+    display: flex; /*Turns the search into a flexible element*/
+    text-align: left;
+    overflow: hidden; /*Hides any overflowing text*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 500px; 
+    margin:auto;
+}
+.botonLupa {
+    border-radius: 3px; 
+    border: 1px solid black;
+    background-color: rgba(12, 135, 173, 0.34);
+    font-family: helvetica;
+    font-size: 13px;
+    margin-right: 10px; 
+}
+.botonLupa:hover {
+    background-color: rgba(25, 58, 142, 0.784);
+    color: white;
+}
+div > input {  /*Puts border transparent*/
+    border: none;   
+    
+}
 
+/*--------------------------------------------------------------------------------*/
+/*HORIZONTAL LINE*/
+hr { /*For the horizontal line of separation*/
+    border: 1px solid #4d4b4b4c; /* Width and color of the line */
+    margin: 20px 0; /* Margin superior and inferior */
+}
+
+/*----------------------------------------------------------------------------------------*/
 /*TITLE*/
 .big-title {
     font-size: 27px; 
 }
 
-main {
-    max-width: 900px; /* Ancho máximo del contenido principal */
-    margin: 0 auto; /* Centrar el contenido en la página */
-    padding: 20px;
-}
-
+/*----------------------------------------------------------------------------------------*/
+/*BOOK ELEMENTS*/
 .book-details {
-    display: flex; /* Establecer el diseño de elementos secundarios en fila */
-}
-
-.book-image {
-    flex: 1; /* Hace que la imagen ocupe el 50% del ancho disponible */
-    margin-right: 20px; /* Espacio entre la imagen y la descripción */
+    display: flex; /*DESIGN IN ROW*/
 }
 
 .book-image img {
@@ -72,131 +110,58 @@ main {
     height: auto;
 }
 
-.s {
-    flex: 1;
-    margin-left: 20px;
-}
-
 .book-options-price {
     font-size: 15px;
     font-weight: bold;
-    color: rgb(255, 0, 0);
     color: rgb(249, 248, 248);
     line-height: 30px;
     background-color: red;
     text-align:center;
-    max-width: 100%;
     height: auto;
 }
 
-.book-description-gender {
-    line-height:2em; /*interlineado*/
-    flex: 2; /* Hace que la descripción ocupe el 50% del ancho disponible */
-}
-
-.book-description{
-    max-width: 100%;
-    height: auto;
-}
-.buy-now {
-    margin-top: 20px;
-}
-
-/* Estilo del botón de compra */
-#comprar {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-/* Cambiar el color del botón cuando se pasa el mouse sobre él */
-#comprar:hover {
-    background-color: #555;
-}
-
-.pBeauty{
-    color: blue;
-}
-
-.ficha-tecnica-td td:first-child {
-    border-right: 1px solid #dddddd;
-}
-
-
+/*----------------------------------------------------------------------------------------*/
+/*VIEW MORE DESCRIPTION*/
 #ver-mas{
     color:blue;
-    padding-bottom: 40px;
-    
+    padding-bottom: 40px;   
 }
 
 #ver-mas:hover{
     text-decoration: underline;
 }
 
-table {
-    display: flex; /* Hacer que los elementos del encabezado sean flexibles */
-    justify-content: space-between; /* Espaciado uniforme entre elementos */
-}
-
-/*ficha tecnica---------------------------------------------------------------------------*/
-.ficha-tecnica {
-    width: 100%;
-    border-collapse: collapse;
-    align-items: center;
-    justify-content: center;
-    margin:center;
-    position: center;
-}
-
-.ficha-tecnica th, .ficha-tecnica td {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-    position: center;
-   
-}
-
-.ficha-tecnica th {
-    background-color: #f2f2f2;
-}
-
-.ficha-tecnica td:first-child {
-    border-right: 1px solid #dddddd;
+/*----------------------------------------------------------------------------------------*/
+/*BUTTONS OF FRONT-PAGE BOOK*/
+.tapa{
+    margin-bottom:auto;
+    margin-top:auto;
+    flex-direction: column;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 /*----------------------------------------------------------------------------------------*/
-
-/*ESTRELLAS DE VALORACION*/
-
-  
-  input[type="radio"] {
-    display: none;
-  }
-  
-  label {
-    color: orange;
-  }
-
-/*COMPRAR AHORA*/
-.compraYa {
-    display: flex; /* Hacer que los elementos se muestren en la misma línea */
-    align-items: center; /* Centrar verticalmente los elementos */
-    justify-content: center;
-    text-align:center;
+/*LABEL OF GENDER AND ISBN*/
+.generos {
+    padding: 5px;
+    background-color: blue;
+    color: white;
+    align-items:center;
 }
 
-.compraYa button {
-    margin-right: 10px; /* Espaciado entre el botón y las estrellas */
-}
-
-/* Estilos para las estrellas de valoración */
-.clasificacion {
-    display: flex; /* Hacer que las estrellas se muestren en la misma línea */
-}
-
-/* Estilos para el botón "Añadir al carrito" */
+.isbn {
+    padding: 5px;
+    background-color: rgba(225, 233, 58, 0.978);
+    color: rgb(0, 0, 0);
+    align-items:center;
+    margin:5px;
+    padding: 10px 20px;
+    display: inline-block;
+}  
+ 
+/*----------------------------------------------------------------------------------------*/  
+/*STYLE FOR THE BUTTON "Añadir al carrito"*/
 .compraYa button {
     background-color: blue;
     color: #fff;
@@ -210,30 +175,39 @@ table {
     margin-right: 10px;
 }
 
-/* Cambiar el color del botón cuando se pasa el mouse sobre él */
-.compraYa button:hover {
+.compraYa button:hover { /*Change color when pointing in it*/
     background-color: #555;
 }
 
+/*----------------------------------------------------------------------------------------*/
+/*STARS PUNCTUATION*/
+.rating {
+    display: inline-block;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    float: right;
+    cursor: pointer;
+  }
+  
+  .rating label:before {
+    content: "\2605";
+    margin: 5px;
+    font-size: 1.4em;
+    color: #ccc;
+  }
+  
+  .rating input:checked ~ label:before {
+    color: #ffcc00;
+  }
 
-/*Etiquetas de genero e isbn*/
-
-.generos {
-    padding: 5px;
-    background-color: blue;
-    color: white;
-    align-items:center;
-}
-
-.isbn {
-    padding: 5px;
-    background-color: rgba(225, 233, 58, 0.978);
-    color: rgb(0, 0, 0);
-    align-items:center;
-}
-
-
-.book { 
+/*----------------------------------------------------------------------------------------*/
+/*BOOK RECOMENDATIONS*/
+.book { /*Box contorn*/
     font-family: helvetica; 
     font-size: 13px;
     background-color: white;
@@ -249,7 +223,8 @@ table {
     position: relative; /*Necessary for internal span positioning*/
     margin: 5px;
 }
-.book span {   
+
+.book span { /*Line between text and image*/  
     position: absolute; 
     width: 170px; 
     height: 1px; 
@@ -257,145 +232,110 @@ table {
     top: 246px;
     left: 0;
 }
-div > del {
-    font-size: 12px;
-    color: rgba(17, 166, 17, 0.878);
-}
-/*Title*/
+
 .bookTitle {
     font-weight: bold;
     color: black;
     text-decoration: none;
 }
-/*Price*/
+
 .bookPrice {
     font-size: 15px;
     font-weight: bold;
     color: rgb(255, 0, 0);
     line-height: 30px;
 }
-/*Add to cart*/
+
 .addToCart {
     color:rgb(0, 0, 255);   
 }
+
 .addToCart:hover {
     font-size: 15px;
     color: rgba(0, 106, 255, 0.723);
 }
+ 
+/*----------------------------------------------------------------------------------------*/
+/*BOOK TECHNICAL ISSUES*/
+.ficha-tecnica {
+    margin: 0 auto; /*Center elements horizontaly*/
+    max-width: 400px; /*Adjust maximum width of screen, to center elements and make it responsive*/
+}
 
-
-/*Secciones secundarias*/
-
-.secciones-secundarias {
+.ficha-tecnica th, .ficha-tecnica td { /*Style table (th-> left side, td-> right side)*/
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    position: center;
     align-content: center;
-    justify-content: center;
-    text-align: center;
-    max-width: 100%;
-    height: auto;
 }
 
-/*OPINIONEs*/
-/* Estilo CSS para la sección de Valoraciones */
-.Valoraciones-personas {
-    text-align: center; /* Centra el contenido horizontalmente */
+.ficha-tecnica th { /*Grey cell (left side)*/
+    background-color: #f2f2f2;
 }
 
-/* Estilo CSS para las cajas de opinión */
-.opinion {
-    display: inline-block; /* Hace que las opiniones aparezcan una al lado de la otra */
-    width: 300px; /* Ajusta el ancho de las opiniones según tus necesidades */
-    margin: 10px; /* Espacio entre las opiniones */
-    border: 1px solid #ddd; /* Borde */
-    padding: 10px; /* Espaciado interno */
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+/*----------------------------------------------------------------------------------------*/
+/*OPINIONS*/
+.opinion { /*Box contorn*/
+    display: inline-block; /*In row*/
+    width: 300px; /*To center elements and make it responsive*/
+    margin: 10px; /*Space between opinions*/
+    border: 1px solid #ddd; 
+    padding: 10px; /*Intern spacing*/
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo CSS para las imágenes redondas */
-.opinion img {
-    width: 50px; /* Ancho igual al alto para hacer la imagen redonda */
-    height: 50px; /* Alto igual al ancho para hacer la imagen redonda */
-    border-radius: 50%; /* Hace que la imagen sea completamente redonda */
-    margin-right: 10px; /* Margen derecho entre la imagen y el nombre */
+
+.opinion img { /*Style for make images round*/
+    width: 55px; 
+    height: 50px; 
+    border-radius: 50%; 
+    margin-right: 10px; 
 }
 
-/* Estilo CSS para el nombre */
-.opinion h4 {
-    margin: 0; /* Elimina el margen superior e inferior del nombre */
+.opinion h4 { /*Name title*/
+    margin: 0; /* Eliminate superior and inferior margins */
 }
 
-/* Estilo CSS para la clasificación de estrellas */
-.opinion .clasificacion {
-    font-size: 24px; /* Tamaño de fuente de las estrellas */
-    margin: 10px 0; /* Espaciado superior e inferior */
-}
-
-/* Estilo CSS para los radios y etiquetas de estrellas */
-.opinion input[type="radio"] {
-    display: none; /* Oculta los radios originales */
-}
-
-.opinion label {
-    cursor: pointer; /* Cambia el cursor al pasar sobre las etiquetas */
-}
-
-/* Estilo CSS para la etiqueta de estrella seleccionada */
-.opinion input[type="radio"]:checked + label {
-    color: gold; /* Cambia el color de la estrella seleccionada a dorado */
+.opinion input[type="radio"]:checked + label { /*To select the stars*/
+    color: gold;
 }
 
 /*--------------------------------------------------------------------------------*/
 /*REVIEW*/
-
-
 .container {
 	max-width:400px;
 	width:100%;
 	margin:0 auto;
-	position:relative;
 }
 
+/*Style for placeholder*/
 #contact input[type="text"], #contact input[type="email"], #contact textarea, #contact a[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
 
-#contact {
+#contact { /*Grey box*/
 	background:#F9F9F9;
 	padding:25px;
 	margin:50px 0;
 }
 
-#contact h3 {
+#contact h3 { /*"Deja tu comentario" style*/
 	color: #F96;
 	display: block;
 	font-size: 30px;
 	font-weight: 400;
-    text-decoration: none;
 }
 
-h3 { text-decoration: none;}
-
-* {
-
+* { /*Right margin of the box and small boxes (name, email...)*/
 	box-sizing:border-box;
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-webkit-font-smoothing:antialiased;
-	-moz-font-smoothing:antialiased;
-	-o-font-smoothing:antialiased;
-	text-rendering:optimizeLegibility;
 }
 
-fieldset {
-	border: medium none !important;
+fieldset { 
+	border: medium none; /*Makes que smal boxes transparent*/
 	margin: 0 0 10px;
-	min-width: 100%;
 	padding: 0;
-	width: 100%;
 }
 
-a {
-    text-decoration: none;
-}
-
-#contact input[type="text"], #contact input[type="email"], #contact textarea {
+#contact input[type="text"], #contact input[type="email"], #contact textarea { /*Adjust small boxes*/
 	width:100%;
 	border:1px solid #CCC;
 	background:#FFF;
@@ -403,155 +343,32 @@ a {
 	padding:10px;
 }
 
-#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
-	-webkit-transition:border-color 0.3s ease-in-out;
-	-moz-transition:border-color 0.3s ease-in-out;
-	transition:border-color 0.3s ease-in-out;
-	border:1px solid #AAA;
-}
-
-#contact textarea {
+#contact textarea { /*Bottom margin for "Escribe aquí tu comentario"*/
 	height:100px;
 	max-width:100%;
-  resize:none;
 }
 
-#contact a[type="submit"] {
-	cursor:pointer;
-	width:100%;
-	border:none;
-	background:#0CF;
-	color:#FFF;
-	margin:0 0 5px;
-	padding:10px;
-	font-size:15px;
-    display: inline-block;
-    margin-right: 10px; /* Agrega margen derecho para separar los botones */
-      
-}
-
-#contact a[type="submit"]:hover {
-	background:#09C;
-	-webkit-transition:background 0.3s ease-in-out;
-	-moz-transition:background 0.3s ease-in-out;
-	transition:background-color 0.3s ease-in-out;
-    
-}
-
-#contact a[type="submit"]:active { 
-    box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5);
- }
-
-#contact input:focus, #contact textarea:focus {
-	outline:0;
-	border:1px solid #999;
-}
-::-webkit-input-placeholder {
- color:#888;
-}
-:-moz-placeholder {
- color:#888;
-}
-::-moz-placeholder {
- color:#888;
-}
-:-ms-input-placeholder {
- color:#888;
-}
-
- #map{
-      height: 0;
-      overflow: hidden;
-      padding-bottom: 22.25%;
-      padding-top: 30px;
-      position: relative;
-  }
-/* Estilos para pantallas más pequeñas (móviles) */
-@media (max-width: 768px) {
-    /* Ajusta los estilos para que se adapten a pantallas más pequeñas */
-    .header-nav ul {
-        padding-left: 0; /* Elimina el relleno izquierdo en el menú */
-    }
-
-    .header-menu-cat li {
-        margin-right: 10px; /* Reduce el espacio entre elementos del menú */
-    }
-
-    .book-details {
-        flex-direction: column; /* Cambia el diseño de elementos secundarios a columna */
-    }
-
-    .book-image {
-        margin-right: 0; /* Elimina el margen derecho de la imagen */
-    }
-
-    .book-description {
-        margin-top: 20px; /* Agrega espacio entre la imagen y la descripción */
-    }
-
-    /* Agrega más ajustes de estilo para pantallas más pequeñas según sea necesario */
-}
-
-.comment {
-    border: 1px solid #eee;
-    padding: 5px;
-    margin: 5px;
-    color:#000;
-}
-.review{
-    text-align: center;
-    color:#000;
-}
-
-/*--------------------------------------------------------------------------------*/
-/*HORIZONTAL LINE*/
-hr { /*For the horizontal line of separation*/
-    border: 1px solid #4d4b4b4c; /* Grosor y color of the line */
-    margin: 20px 0; /* Margin superior and inferior */
-}
-
-/*--------------------------------------------------------------------------------*/
-/*BIG BUTTON*/
-.big-button {
-    text-decoration: underline;
-    border: 2px solid #0000004a;
-    border-radius: 5px; /*Customize the level of corner roundness*/
-    padding: 20px 20px;
+/*BUTTONS OF REVIEW*/
+.newButton {
     font-family: helvetica;
-    font-weight: bold;
-    font-size: 16px;
-    color: black;
-    background-color: #0d42e35e;
-    cursor: pointer;  
-}
-.big-button:hover {
-    background-color: rgba(30, 71, 122, 0.678);
-    color: white;
+    font-size: 15px;
+    display: flex;
+    padding: 10px 20px;
+    text-align: center;
     text-decoration: none;
-    padding: 5px;
+    border: 2px solid #0000004a;
+    color: black;
+    background-color: #0000004a;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    flex-direction: column;
 }
 
-
-
-/*Segundo estilo de clasificacion*/
-.ec-stars-wrapper {
-    font-size: 0;
-    display: inline-block;
-  }
-  
-  .ec-stars-wrapper label {
-    font-size: 32px;
-    font-size: 2rem;
-    color: #888;
-    cursor: pointer; /* Cambia el cursor al pasar sobre las estrellas */
-    margin: 0 2px; /* Añade espacio entre las estrellas */
-  }
-  
-  .ec-stars-wrapper label:hover {
-    color: rgb(39, 130, 228); /* Cambia el color de las estrellas al pasar el mouse sobre ellas */
-  }
-  
-
+.newButton:hover {
+    background-color: rgba(30, 122, 93, 0.678);
+    color: white;
+}
 
 /*--------------------------------------------------------------------------------*/
 /*FOOTER*/
@@ -561,4 +378,13 @@ footer {
     padding: 20px;
     color: white
 }
+
+
+@media (max-width: 768px) { /*Adjustment for mobile phones or small screens*/
+    
+    .book-details { 
+        flex-direction: column; 
+    }
+}
+
 

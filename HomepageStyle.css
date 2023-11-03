@@ -1,3 +1,4 @@
+/*----------------------------------------------------------------------------------------*/
 /*BODY*/
 body {
     background-color: white;
@@ -5,30 +6,45 @@ body {
     font-family: helvetica; /*Font*/
 }
 
-/*LOGO*/
-.logo { 
-    margin-right: 40px; 
-    vertical-align: middle;  /*Aligns the element to the vertical center of the other element*/
+/*----------------------------------------------------------------------------------------*/
+/*MENU*/
+.Menu {
+    font-weight: bold;
+    font-size: 16px;  
+    cursor: pointer;
+    padding: 3px 3px;  
+}
+.background {
+    background-color: rgba(30, 122, 93, 0.678);
 }
 
-/*MENU*/
-.menu {
-    font-weight: bold;
+
+/*----------------------------------------------------------------------------------------*/
+/*LOGO*/
+.logo{
+    align-content: left;
+    float: left;
+    margin-bottom:10px;
+}
+
+/*----------------------------------------------------------------------------------------*/
+/*LITERARY GENRES*/
+.LiteraryGenres {
     font-family: helvetica;
     font-size: 16px;
-    text-decoration: underline;
     background-color: white;
     border-radius: 5px; 
     border: 1px solid white;
-    cursor: pointer; /*Changes the cursor when hovering over the button*/
-    padding: 5px 5px; /*Add space around the content of an element
-                      (first the top and bottom space and second the left and right space)*/
+    cursor: pointer;
+    padding: 3px 3px;
+    margin: 0px;    
 }
-.menu:hover { /*It's used to apply styles to an element when the mouse cursor is over it*/
+.LiteraryGenres:hover {
     background-color: rgba(30, 122, 93, 0.678);
     color: white;
 }
 
+/*--------------------------------------------------------------------------------*/
 /*SEARCHER*/
 .buscador {
     border: 1px;
@@ -39,7 +55,9 @@ body {
     text-align: left;
     overflow: hidden; /*Hides any overflowing text*/
     margin-top: 20px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    max-width: 500px; 
+    margin:auto;
 }
 .botonLupa {
     border-radius: 3px; 
@@ -53,26 +71,19 @@ body {
     background-color: rgba(25, 58, 142, 0.784);
     color: white;
 }
-div > input {  
+div > input {  /*Puts border transparent*/
     border: none;   
+    
 }
 
-/*LITERARY GENRES*/
-.literaryGenres {
-    font-family: helvetica;
-    font-size: 16px;
-    background-color: white;
-    border-radius: 5px; 
-    border: 1px solid white;
-    cursor: pointer;
-    padding: 5px 5px;
-    margin: 3px;   
-}
-.literaryGenres:hover {
-    background-color: rgba(30, 122, 93, 0.678);
-    color: white;
+/*--------------------------------------------------------------------------------*/
+/*HORIZONTAL LINE*/
+hr { /*For the horizontal line of separation*/
+    border: 1px solid #4d4b4b4c; /* Width and color of the line */
+    margin: 20px 0; /* Margin superior and inferior */
 }
 
+/*----------------------------------------------------------------------------------------*/
 /*ELEMENTS*/
 .book { 
     font-family: helvetica; 
@@ -89,6 +100,7 @@ div > input {
     overflow: hidden; 
     position: relative; /*Necessary for internal span positioning*/
     margin: 5px;
+    margin-top: 30px;
 }
 .book span {   
     position: absolute; 
@@ -124,6 +136,7 @@ div > del {
     color: rgba(0, 106, 255, 0.723);
 }
 
+/*----------------------------------------------------------------------------------------*/
 /*CREATE NEW ITEM*/
 .newButton {
     font-family: helvetica;
@@ -144,6 +157,7 @@ div > del {
     color: white;
 }
 
+/*----------------------------------------------------------------------------------------*/
 /*FOOTER*/
 footer {
     margin-top: 40px;
@@ -151,3 +165,4 @@ footer {
     padding: 20px;
     color: white
 }
+

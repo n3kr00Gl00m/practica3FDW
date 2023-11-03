@@ -1,5 +1,6 @@
 body {
     margin-left: 50px;
+    margin-right: 50px;
 }
 
 form {
@@ -15,6 +16,9 @@ footer {
 }
 
 .tipo-tapa , .condiciones{
-    margin-top: 20px;
+    margin-top: 6px;
+}
+
+.espacio{ /*FOR MARGINS BETWEEN ATRIBUTES*/
     margin-top: 10px;
 }

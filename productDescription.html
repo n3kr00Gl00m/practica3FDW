@@ -10,43 +10,58 @@
 </head>
 
 <body>
-    <!--TITLE-->
     <!-------------------------------------------------------------------------------------------->
-    <!--Logo-->
-    <a class="header-logo" href="http://127.0.0.1:3000/Homepage.html"><img src="ImageLogo.jpg" width="80" height="90"
-            alt="I-CHEGA"></a>
+    <!--MENU-->
+        <div class="background">
+            <a class="Menu">Inicio</a>
+            <a class="Menu">Contacto</a>
+            <a class="Menu">Catálogo</a>
+            <a class="Menu">Ofertas</a>
+        </div>
+  
     <!-------------------------------------------------------------------------------------------->
-    <!--Menu-->
-    <button class="Menu">Inicio</button>
-    <button class="Menu">Contacto</button>
-    <button class="Menu">Catálogo</button>
-    <button class="Menu">Ofertas</button>
-    <BR>
+    <!--LOGO-->
+    <div class="logo">  
+        <img src="ILogo.png" width="60" height="70" alt="I-CHEGA"/><!--<alt> describes an image--></div>
+    </div>  
+
     <!-------------------------------------------------------------------------------------------->
     <!--LITERARY GENRES-->
-    <button class="LiteraryGenres">Ficción</button>
-    <button class="LiteraryGenres">No ficción</button>
-    <button class="LiteraryGenres">Misterio</button>
-    <button class="LiteraryGenres">Ciencia ficción</button>
-    <button class="LiteraryGenres">Romance</button>
-    <button class="LiteraryGenres">Fantasía</button>
-    <button class="LiteraryGenres">Biografía</button>
-    <button class="LiteraryGenres">Historia</button>
-    <button class="LiteraryGenres">Autoayuda</button>
-    <button class="LiteraryGenres">Poesía</button>
+    <form>
+        <!--<form> represents a section of a document that contains interactive controls-->
+        <button class="LiteraryGenres">Ficción</button>
+        <button class="LiteraryGenres">No ficción</button>
+        <button class="LiteraryGenres">Misterio</button>
+        <button class="LiteraryGenres">Ciencia ficción</button>
+        <button class="LiteraryGenres">Romance</button>
+        <button class="LiteraryGenres">Fantasía</button>
+        <button class="LiteraryGenres">Biografía</button>
+        <button class="LiteraryGenres">Historia</button>
+        <button class="LiteraryGenres">Autoayuda</button>
+        <button class="LiteraryGenres">Poesía</button>
+    </form>
+    </div>
 
-    <hr>
+    <!-------------------------------------------------------------------------------------------->    
+    <!--SEARCHER-->
+    <div class="buscador">
+        <button class="botonLupa">Buscar</button>
+        <input type="text" placeholder="Buscar por autor, titulo, ISBN...">
+        <!--<type> defines a text field-->
+        <!--<placeholder> is used to provide a hint of what the user is expected to enter in that space-->
+    </div>
 
+    <hr> <!--HORIZONTAL LINE-->
 
     <main>
         <section class="book-details">
-            <!-------------------------------------------------------------------------------------------->
-            <!--IMAGE-->
+    <!-------------------------------------------------------------------------------------------->
+    <!--IMAGE-->
             <div class="book-image">
                 <img src="Image8.jpg" alt="Portada del Libro">
             </div>
-            <!-------------------------------------------------------------------------------------------->
-            <!--BOOK DESCRIPTION-->
+    <!-------------------------------------------------------------------------------------------->
+    <!--BOOK DESCRIPTION-->
             <table>
                 <div class="book-description">
                     <div class="book-description">
@@ -61,41 +76,25 @@
 
                     <!-------------------------------------------------------------------------------------------->
                     <!--SINOPSIS-->
-                    <p id="descripcion-corta">La trama comienza cuando una extraña y densa niebla envuelve la ciudad de
+                    <p>La trama comienza cuando una extraña y densa niebla envuelve la ciudad de
                         Bridgton, Maine, después de una tormenta eléctrica. David Drayton, el protagonista, se encuentra
                         en
                         un supermercado con su hijo Billy cuando la niebla comienza a cubrir todo. Pronto, los
                         habitantes de
                         la ciudad se dan cuenta de que algo aterrador se oculta en la niebla: criaturas grotescas y
                         mortales.</p>
-                    <p id="descripcion-larga" style="display: none;">A medida que el caos y el terror se apoderan de la
+                        A medida que el caos y el terror se apoderan de la
                         ciudad, un grupo diverso de personas se refugia en el supermercado en busca de protección. La
                         historia se centra en sus luchas internas y desesperadas para sobrevivir, tanto a las criaturas
-                        acechantes como a la creciente paranoia y la tensión entre los supervivientes.<br><br>La niebla
-                        y
-                        las criaturas que la habitan se convierten en un símbolo de lo desconocido y el miedo que se
-                        oculta
-                        en las profundidades de la psicología humana. La novela explora temas como el aislamiento, la
-                        supervivencia y la desesperación, y plantea preguntas sobre la naturaleza de la fe, la religión
-                        y la
-                        moral en situaciones extremas.<br><br>Sin entrar en spoilers, "The Mist" es conocida por su
-                        final
-                        impactante y conmovedor que ha dejado una fuerte impresión en los lectores a lo largo de los
-                        años.
-                        La historia también ha sido adaptada en una película de 2007 dirigida por Frank Darabont y una
-                        serie
-                        de televisión que se emitió en 2017. La novela es un ejemplo de la habilidad de Stephen King
-                        para
-                        crear atmósferas aterradoras y explorar los aspectos más oscuros de la psicología humana en
-                        situaciones de crisis.</p>
-                    <a id="ver-mas" onclick="toggleDescripcion();">Ver más</a><br><br>
+                        acechantes como a la creciente paranoia y la tensión entre los supervivientes.</p>
+                    <a id="ver-mas" href="https://stephenking.es/">Ver más</a>
                     <!-------------------------------------------------------------------------------------------->
                     <!--BUTTONS-->
-                    <button class="tapa-tipo"><img src="tick.jpeg" alt="camion" width="20" height="20"> Tapa blanda
-                    </button>
-                    <button class="tapa-tipo"><img src="tick.jpeg" alt="camion" width="20" height="20"> Tapa dura
-                    </button><br><br>
-                    <b> <img src="entrega.png" alt="camion" width="30" height="25"> Recíbelo mañana</b><br><br>
+                    <div class="tapa"><button class="tapa-tipo"><img src="tick.jpeg" width="20" height="20"> Tapa blanda
+                    </button></div>
+                    <div class="tapa"><button class="tapa-tipo"><img src="tick.jpeg" width="20" height="20"> Tapa dura
+                    </button></div>
+                    <div class="tapa"><b> <img src="entrega.png" alt="camion" width="30" height="25"> Recíbelo mañana</b></div>
                     <!-------------------------------------------------------------------------------------------->
                     <!--ISBN-->
                     <span class="isbn">ISBN: 1234567890 DEBOLS!LLO</span>
@@ -105,54 +104,42 @@
         <hr> <!--HORIZONTAL LINE-->
         </div>
 
-        <!-------------------------------------------------------------------------------------------->
-        <!--PRICE-->
-        <section class="book-options">
+    <!-------------------------------------------------------------------------------------------->
+    <!--PRICE-->
             <div class="book-options-price">
                 <h2>19,89€</h2>
             </div>
-        </section>
-        <!-------------------------------------------------------------------------------------------->
-        <!--STARS REVIEW AND BUY BUTTON-->
+    <!-------------------------------------------------------------------------------------------->
+    <!--STARS REVIEW AND BUY BUTTON-->
         <section class="compraYa">
-            <button><img src="bolsa-de-la-compra.png" alt="bolsa de la compra" width=" 20" height="20">Añadir al
-                carrito</button>
-            <div>
-                <form>
-                    <table class="otras-tablas">
-                        <td>
-                            <p class="clasificacion">
-                                <input id="radio1" type="radio" name="estrellas" value="5"><!--
-                                        --><label for="radio1">★</label><!--
-                                        --><input id="radio2" type="radio" name="estrellas" value="4"><!--
-                                        --><label for="radio2">★</label><!--
-                                        --><input id="radio3" type="radio" name="estrellas" value="3"><!--
-                                        --><label for="radio3">★</label><!--
-                                        --><input id="radio4" type="radio" name="estrellas" value="2"><!--
-                                        --><label for="radio4">★</label><!--
-                                        --><input id="radio5" type="radio" name="estrellas" value="1"><!--
-                                        --><label for="radio5">★</label>
-                            </p>
-                        </td>
-
-                    </table>
-                </form>
-            </div>
+            <button><img src="bolsa-de-la-compra.png" alt="bolsa de la compra" width=" 20" height="20">Añadir al carrito</button>
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5"></label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4"></label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3"></label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2"></label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1"></label>
+                  </div>
         </section>
 
 
 
-        <!-------------------------------------------------------------------------------------------->
-        <!--RECOMENDATIONS-->
+    <!-------------------------------------------------------------------------------------------->
+    <!--RECOMENDATIONS-->
         <section class="secciones-secundarias">
             <section>
                 <h2>Porque has leído "La niebla de Stephen King" te recomendamos...</h2>
                 <span>
                     <button class="book"> <!--Element4-->
-                        <a href="http://127.0.0.1:3000/productDescription.html"><img src="Image4.jpg" width="150" height="225" /></a>
+                        <a href="productDescription.html"><img src="Image4.jpg" width="150" height="225" /></a>
                         <span></span>
                         <div>
-                            <a class="bookTitle" href="http://127.0.0.1:3000/productDescription.html">
+                            <a class="bookTitle" href="productDescription.html">
                                 <br>RETORNO DE LAS<br>ESTRELLAS
                             </a>
                         </div>
@@ -163,10 +150,10 @@
                 </span>
                 <span>
                     <button class="book"> <!--Element2-->
-                        <a href="http://127.0.0.1:3000/productDescription.html"><img src="Image2.jpg" width="150" height="225" /></a>
+                        <a href="productDescription.html"><img src="Image2.jpg" width="150" height="225" /></a>
                         <span></span>
                         <div>
-                            <a class="bookTitle" href="http://127.0.0.1:3000/productDescription.html">
+                            <a class="bookTitle" href="productDescription.html">
                                 <br>EL PALACIO DE<br>LA MEDIA NOCHE
                             </a>
                         </div>
@@ -177,10 +164,10 @@
                 </span>
                 <span>
                     <button class="book"> <!--Element5-->
-                        <a href="http://127.0.0.1:3000/productDescription.html"><img src="Image5.jpg" width="150" height="225" /></a>
+                        <a href="productDescription.html"><img src="Image5.jpg" width="150" height="225" /></a>
                         <span></span>
                         <div>
-                            <a class="bookTitle" href="http://127.0.0.1:3000/productDescription.html">
+                            <a class="bookTitle" href="productDescription.html">
                                 <br>INVISIBLE<br><br>
                             </a>
                         </div>
@@ -190,9 +177,10 @@
                     </button>
                 </span>
             </section>
-            <!-------------------------------------------------------------------------------------------->
-            <!--TECNICAL INFORMATION-->
+    <!-------------------------------------------------------------------------------------------->
+    <!--TECNICAL INFORMATION-->
             <h2><u>Ficha técnica del libro:</u></h2>
+            <div class="ficha-centrada">
             <section class="ficha-tecnica">
                 <table>
                     <tr>
@@ -247,71 +235,28 @@
                         </td>
                 </table>
             </section>
-            <section class="Valoraciones-personas">
+            </div>
+
+    <!-------------------------------------------------------------------------------------------->
+    <!--VALORATIONS-->
+            <section>
                 <h2><u>Valoraciones:</u></h2>
                 <div class="opinion">
-                    <span class="persona">
+                    <span>
                         <img src="autoestima-valoracion-personal.webp" alt="persona-valoración">
                         <h4>Ana Martín</h4>
                     </span>
-
-                    <form>
-                        <table class="otras-tablas">
-                            <tr>
-                                <td>
-                                    <p>"Buen libro. Mejor leerlo a oscuras y con un té."</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p class="clasificación">
-                                        <input id="radio6" type="radio" name="estrellas" value="5"><!--
-                                    --><label for="radio6">★</label><!--
-                                    --><input id="radio7" type="radio" name="estrellas" value="4"><!--
-                                    --><label for="radio7">★</label><!--
-                                    --><input id="radio8" type="radio" name="estrellas" value="3"><!--
-                                    --><label for="radio8">★</label><!--
-                                    --><input id="radio9" type="radio" name="estrellas" value="2"><!--
-                                    --><label for="radio9">★</label><!--
-                                    --><input id="radio10" type="radio" name="estrellas" value="1"><!--
-                                    --><label for="radio10">★</label>
-                                    </p>
-                                </td>
-                            </tr>
-                        </table>
-                    </form>
+                        <p>"Buen libro. Mejor leerlo a oscuras y con un té."</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        
                 </div>
                 <div class="opinion">
-                    <span class="persona">
+                    <span>
                         <img src="pradells-1660902907.png" alt="persona-valoración">
                         <h4>Joan Pradrells</h4>
                     </span>
-
-                    <form>
-                        <table class="otras-tablas">
-                            <tr>
-                                <td>
-                                    <p>"No es una pesa pero sirve para calentar biceps."</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p class="clasificación">
-                                        <input id="radio6" type="radio" name="estrellas" value="5"><!--
-                                    --><label for="radio6">★</label><!--
-                                    --><input id="radio7" type="radio" name="estrellas" value="4"><!--
-                                    --><label for="radio7">★</label><!--
-                                    --><input id="radio8" type="radio" name="estrellas" value="3"><!--
-                                    --><label for="radio8">★</label><!--
-                                    --><input id="radio9" type="radio" name="estrellas" value="2"><!--
-                                    --><label for="radio9">★</label><!--
-                                    --><input id="radio10" type="radio" name="estrellas" value="1"><!--
-                                    --><label for="radio10">★</label>
-                                    </p>
-                                </td>
-                            </tr>
-                        </table>
-                    </form>
+                        <p>"No es una pesa pero sirve para calentar biceps."</p>
+                        <p>⭐⭐⭐</p>
                 </div>
             </section>
     </main>
@@ -319,7 +264,7 @@
     <!-------------------------------------------------------------------------------------------->
     <!--REVIEWS-->
     <div class="container">
-        <form id="contact" action="" method="post">
+        <form id="contact" method="post">
           <h3>Deja tu comentario:</h3>
           <fieldset>
             <input placeholder="Nombre" type="text" tabindex="1">
@@ -331,29 +276,16 @@
             <textarea placeholder="Escribe aquí tu comentario...." tabindex="5"></textarea>
           </fieldset>
           <fieldset>
-            <div class="ec-stars-wrapper">
-                <a  data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-                <a  data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-                <a  data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-                <a  data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-                <a  data-value="5" title="Votar con 5 estrellas">&#9733;</a>
-            </div>
-            <noscript>Necesitas tener habilitado javascript para poder votar</noscript>
-            
-                       
-          <fieldset>          
-            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
-            <!-- Botones adicionales -->
+            <!-- BUTTONS -->
             <p>
-                <a name="submit" type="submit" id="contact-submit" data-submit="...Sending">Editar</a>
-                <a name="submit" type="submit" id="contact-submit" data-submit="...Sending">Borrar</a>
-                <a name="submit" type="submit" id="contact-submit" data-submit="...Sending" href="Homepage.html"> Ver todo</a>
+                <a class="newButton">Editar</a>
+                <a class="newButton">Borrar</a>
+                <a class="newButton" href="Homepage.html"> Ver todo</a>
             </p>
-          </fieldset>
         </form>
       </div>
 
-    
+    <!-------------------------------------------------------------------------------------------->
     <!--FOOTER-->
     <footer>
         <p>
@@ -365,41 +297,6 @@
         </p>
     </footer>
 
-    <script>
-        // Función para cambiar la descripción entre corta y larga
-        function toggleDescripcion() {
-            var descripcionCorta = document.getElementById("descripcion-corta");
-            var descripcionLarga = document.getElementById("descripcion-larga");
-            var verMasBoton = document.getElementById("ver-mas");
-
-            if (descripcionLarga.style.display === "none") {
-                descripcionCorta.style.display = "none";
-                descripcionLarga.style.display = "block";
-                verMasBoton.innerHTML = "Ver menos";
-            } else {
-                descripcionCorta.style.display = "block";
-                descripcionLarga.style.display = "none";
-                verMasBoton.innerHTML = "Ver más";
-            }
-        }
-
-        const stars = document.querySelectorAll('.ec-stars-wrapper input');
-
-        stars.forEach((star) => {
-        star.addEventListener('change', (event) => {
-            const selectedValue = event.target.getAttribute('data-value');
-            
-            // Recorre las estrellas y cambia su color en función del valor seleccionado
-            stars.forEach((s) => {
-            if (s.getAttribute('data-value') <= selectedValue) {
-                s.nextElementSibling.style.color = 'rgb(39, 130, 228)'; // Color azul
-            } else {
-                s.nextElementSibling.style.color = '#888'; // Color gris
-            }
-            });
-        });
-        });
-    </script>
 </body>
 
 </html>
