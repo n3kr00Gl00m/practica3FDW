@@ -75,7 +75,6 @@ body {
 }
 div > input {  /*Puts border transparent*/
     border: none;   
-    
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -140,19 +139,19 @@ div > del {
 
 /*----------------------------------------------------------------------------------------*/
 /*CREATE NEW ITEM*/
+.newButtonA{
+    margin-top: 34px;
+}
 .newButton {
     font-family: helvetica;
     font-size: 15px;
-    display: inline-block;
-    padding: 10px 20px;
-    text-align: center;
+    padding: 10px 15px;
     text-decoration: none;
     border: 2px solid #0000004a;
     color: black;
     background-color: #0000004a;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 30px;
 }
 .newButton:hover {
     background-color: rgba(30, 122, 93, 0.678);
