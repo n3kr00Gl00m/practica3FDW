@@ -24,6 +24,7 @@ main {
     cursor: pointer;
     padding: 3px 3px;
     margin-bottom: 50px;  
+    line-height: 30px; /*Controls the line height in an element*/
 }
 .background {
     background-color: rgba(30, 122, 93, 0.678);
@@ -48,6 +49,7 @@ main {
     cursor: pointer;
     padding: 3px 3px;
     margin: 0px;    
+    line-height: 30px; 
 }
 .LiteraryGenres:hover {
     background-color: rgba(30, 122, 93, 0.678);

@@ -12,7 +12,8 @@ body {
     font-weight: bold;
     font-size: 16px;  
     cursor: pointer;
-    padding: 3px 3px;  
+    padding: 3px 3px; 
+    line-height: 30px; /*Controls the line height in an element*/ 
 }
 .background {
     background-color: rgba(30, 122, 93, 0.678);
@@ -37,7 +38,8 @@ body {
     border: 1px solid white;
     cursor: pointer;
     padding: 3px 3px;
-    margin: 0px;    
+    margin: 0px;   
+    line-height: 30px; 
 }
 .LiteraryGenres:hover {
     background-color: rgba(30, 122, 93, 0.678);
@@ -165,4 +167,3 @@ footer {
     padding: 20px;
     color: white
 }
-
