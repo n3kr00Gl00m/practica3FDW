@@ -7,22 +7,23 @@
     <title>I-CHEGA</title>
     <link rel="icon" href="please.png">
     <link rel="stylesheet" href="productDescription.css"> <!-- Puedes enlazar tu archivo CSS aquí -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
     <!-------------------------------------------------------------------------------------------->
     <!--MENU-->
     <div class="background">
-        <a class="Menu">Inicio</a>
-        <a class="Menu">Contacto</a>
-        <a class="Menu">Catálogo</a>
-        <a class="Menu">Ofertas</a>
+        <a class="menu">Inicio</a>
+        <a class="menu">Contacto</a>
+        <a class="menu">Catálogo</a>
+        <a class="menu">Ofertas</a>
     </div>
 
     <!-------------------------------------------------------------------------------------------->
     <!--LOGO-->
     <div class="logo">
-        <img src="ILogo.png" width="70" height="80" alt="I-CHEGA" /><!--<alt> describes an image-->
+        <a class="header-logo" href="Homepage.html"><img src="ILogo.png" width="80" height="90" alt="I-CHEGA"></a>
     </div>
 
     <!-------------------------------------------------------------------------------------------->
@@ -86,18 +87,26 @@
                         ciudad, un grupo diverso de personas se refugia en el supermercado en busca de protección. La
                         historia se centra en sus luchas internas y desesperadas para sobrevivir, tanto a las criaturas
                         acechantes como a la creciente paranoia y la tensión entre los supervivientes.</p>
-                    <a id="ver-mas" href="https://stephenking.es/">Ver más</a>
                     <!-------------------------------------------------------------------------------------------->
                     <!--BUTTONS-->
-                    <div class="tapa"><button class="tapa-tipo"><img src="tick.jpeg" width="20" height="20"> Tapa blanda
-                        </button></div>
-                    <div class="tapa"><button class="tapa-tipo"><img src="tick.jpeg" width="20" height="20"> Tapa dura
-                        </button></div>
-                    <div class="tapa"><b> <img src="entrega.png" alt="camion" width="30" height="25"> Recíbelo
-                            mañana</b></div>
+                    
+                    <p>
+                        <a class="newButton">Editar</a>
+                        <a class="newButton">Borrar</a>
+                        <a class="newButton" href="Homepage.html"> Ver todo</a>
+
+                    </p>
+
+                    <p>
+                        <h4>Tipo de cubierta</h4>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Blanda</option>
+                            <option value="2">Dura</option>
+                        </select>
+                    </p>
+
                     <!-------------------------------------------------------------------------------------------->
                     <!--ISBN-->
-                    <span class="isbn">ISBN: 1234567890 DEBOLS!LLO</span>
                 </div>
             </table>
         </section>
@@ -113,70 +122,11 @@
         <!-------------------------------------------------------------------------------------------->
         <!--STARS REVIEW AND BUY BUTTON-->
         <section class="compraYa">
-            <button><img src="bolsa-de-la-compra.png" alt="bolsa de la compra" width=" 20" height="20">Añadir al
-                carrito</button>
-            <div class="rating">
-                <input type="radio" id="star5" name="rating" value="5">
-                <label for="star5"></label>
-                <input type="radio" id="star4" name="rating" value="4">
-                <label for="star4"></label>
-                <input type="radio" id="star3" name="rating" value="3">
-                <label for="star3"></label>
-                <input type="radio" id="star2" name="rating" value="2">
-                <label for="star2"></label>
-                <input type="radio" id="star1" name="rating" value="1">
-                <label for="star1"></label>
-            </div>
+            <button><img src="bolsa-de-la-compra.png" alt="bolsa de la compra" width=" 20" height="20">Comprar</button>
         </section>
 
         <!-------------------------------------------------------------------------------------------->
-        <!--RECOMENDATIONS-->
-        <section class="secciones-secundarias">
-            <section>
-                <h2>Porque has leído "La niebla de Stephen King" te recomendamos...</h2>
-                <span>
-                    <button class="book"> <!--Element4-->
-                        <a href="productDescription.html"><img src="Image4.jpg" width="150" height="225" /></a>
-                        <span></span>
-                        <div>
-                            <a class="bookTitle" href="productDescription.html">
-                                <br>RETORNO DE LAS<br>ESTRELLAS
-                            </a>
-                        </div>
-                        <div>Stanisław Lem</div>
-                        <div class="bookPrice">13.77€</div>
-                        <div class="addToCart">Añadir a la cesta</div>
-                    </button>
-                </span>
-                <span>
-                    <button class="book"> <!--Element2-->
-                        <a href="productDescription.html"><img src="Image2.jpg" width="150" height="225" /></a>
-                        <span></span>
-                        <div>
-                            <a class="bookTitle" href="productDescription.html">
-                                <br>EL PALACIO DE<br>LA MEDIA NOCHE
-                            </a>
-                        </div>
-                        <div>Carlos Ruiz Zafón</div>
-                        <div class="bookPrice">9.45€</div>
-                        <div class="addToCart">Añadir a la cesta</div>
-                    </button>
-                </span>
-                <span>
-                    <button class="book"> <!--Element5-->
-                        <a href="productDescription.html"><img src="Image5.jpg" width="150" height="225" /></a>
-                        <span></span>
-                        <div>
-                            <a class="bookTitle" href="productDescription.html">
-                                <br>INVISIBLE<br><br>
-                            </a>
-                        </div>
-                        <div>Eloy Moreno</div>
-                        <div class="bookPrice">15.15€</div>
-                        <div class="addToCart">Añadir a la cesta</div>
-                    </button>
-                </span>
-            </section>
+
             <!-------------------------------------------------------------------------------------------->
             <!--TECNICAL INFORMATION-->
             <h2><u>Ficha técnica del libro:</u></h2>
@@ -247,7 +197,7 @@
                         <h4>Ana Martín</h4>
                     </span>
                     <p>"Buen libro. Mejor leerlo a oscuras y con un té."</p>
-                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>5/5 ⭐</p>
 
                 </div>
                 <div class="opinion">
@@ -256,7 +206,7 @@
                         <h4>Joan Pradrells</h4>
                     </span>
                     <p>"No es una pesa pero sirve para calentar biceps."</p>
-                    <p>⭐⭐⭐</p>
+                    <p>3/5 ⭐</p>
                 </div>
             </section>
     </main>
@@ -270,17 +220,12 @@
                 <input placeholder="Nombre" type="text" tabindex="1">
             </fieldset>
             <fieldset>
-                <input placeholder="Email" type="email" tabindex="2">
-            </fieldset>
-            <fieldset>
                 <textarea placeholder="Escribe aquí tu comentario...." tabindex="5"></textarea>
             </fieldset>
             <fieldset>
                 <!-- BUTTONS -->
                 <p>
-                    <a class="newButton">Editar</a>
-                    <a class="newButton">Borrar</a>
-                    <a class="newButton" href="Homepage.html"> Ver todo</a>
+                    <a class="newButton">Enviar</a>
                 </p>
         </form>
     </div>

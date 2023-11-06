@@ -127,6 +127,7 @@ hr { /*For the horizontal line of separation*/
 #ver-mas{
     color:blue;
     padding-bottom: 40px;   
+    margin: 10px;
 }
 
 #ver-mas:hover{
@@ -151,16 +152,6 @@ hr { /*For the horizontal line of separation*/
     color: white;
     align-items:center;
 }
-
-.isbn {
-    padding: 5px;
-    background-color: rgba(225, 233, 58, 0.978);
-    color: rgb(0, 0, 0);
-    align-items:center;
-    margin:5px;
-    padding: 10px 20px;
-    display: inline-block;
-}  
  
 /*----------------------------------------------------------------------------------------*/  
 /*STYLE FOR THE BUTTON "Añadir al carrito"*/
@@ -168,7 +159,7 @@ hr { /*For the horizontal line of separation*/
     background-color: blue;
     color: #fff;
     border: none;
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 5px;
     cursor: pointer;
 }
@@ -180,32 +171,6 @@ hr { /*For the horizontal line of separation*/
 .compraYa button:hover { /*Change color when pointing in it*/
     background-color: #555;
 }
-
-/*----------------------------------------------------------------------------------------*/
-/*STARS PUNCTUATION*/
-.rating {
-    display: inline-block;
-  }
-  
-  .rating input {
-    display: none;
-  }
-  
-  .rating label {
-    float: right;
-    cursor: pointer;
-  }
-  
-  .rating label:before {
-    content: "\2605";
-    margin: 5px;
-    font-size: 1.4em;
-    color: #ccc;
-  }
-  
-  .rating input:checked ~ label:before {
-    color: #ffcc00;
-  }
 
 /*----------------------------------------------------------------------------------------*/
 /*BOOK RECOMENDATIONS*/
@@ -274,6 +239,22 @@ hr { /*For the horizontal line of separation*/
 
 .ficha-tecnica th { /*Grey cell (left side)*/
     background-color: #f2f2f2;
+}
+
+
+/*----------------------------------------------------------------------------------------*/
+/*MENU*/
+.menu {
+    font-weight: bold;
+    font-size: 16px;  
+    cursor: pointer;
+    padding: 3px 3px; 
+    line-height: 30px; /*Controls the line height in an element*/ 
+    text-decoration: none;
+    color: #000;
+}
+.background {
+    background-color: rgba(30, 122, 93, 0.678);
 }
 
 /*----------------------------------------------------------------------------------------*/
