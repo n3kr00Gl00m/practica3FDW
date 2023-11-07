@@ -1,6 +1,11 @@
 body {
     font-family: helvetica; /*Font*/
 }
+.logo{
+    align-content: left;
+    float: left;
+}
+
 .row{
     margin-left: 15px;
     margin-right: 15px;

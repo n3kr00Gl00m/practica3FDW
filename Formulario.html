@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>I-CHEGA</title>
   <link rel="stylesheet" href="HomepageStyle.css">
-  <link rel="icon" href="please.png">
+  <link rel="icon" href="please.png"> <!--For icon on webpage-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!--LINK TO BOOTSTRAP STYLE-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -18,7 +18,7 @@
   <!-------------------------------------------------------------------------------------------->
   <!--LOGO-->
   <div class="row">
-    <a class="header-logo" href="Homepage.html"><img src="ILogo.png" width="80" height="90" alt="I-CHEGA"></a>
+    <a class="logo" href="Homepage.html"><img src="ILogo.png" width="80" height="90" alt="I-CHEGA"></a>
 
     <!-------------------------------------------------------------------------------------------->
     <!--FORM-->
@@ -27,13 +27,21 @@
         <h2>¿Eres escritor? Mándanos tu libro <span class="badge bg-primary">¡Nuevo!</span></h2>
 
         <label for="inputTitle">Título</label>
-        <input type="text" class="form-control" id="inputTitle">
+        <input type="text" class="form-control" id="inputTitle" placeholder="Mi Libro, Luna de Plutón">
 
         <label for="inputAuthor">Autor</label>
         <input type="text" class="form-control" id="inputAuthor" placeholder="Benganito">
 
-        <label for="inputGender">Género</label>
-        <input type="text" class="form-control" id="inputGender" placeholder="Ejemplo: Ciencia ficción">
+        <label for="inputGender">Géneros</label>
+        <select id="inputIdioma" class="form-control">
+          <option selected>...</option>
+          <option>Ciencia Ficción</option>
+          <option>Thriller</option>
+          <option>Cuento</option>
+          <option>Romance</option>
+          <option>Aventura</option>
+          <option>Fantasía</option>
+        </select>
 
         <label for="inputSinopsis">Sinopsis</label>
         <input type="text" class="form-control" id="inputSinopsis" placeholder="En 1998, en pleno auge de ...">
@@ -52,7 +60,7 @@
 
         <div>
           <div>
-            <label for="inputEditor">Editoriales previas</label>
+            <label for="inputEditor">Editorial</label>
             <input type="text" class="form-control" id="inputEditor">
           </div>
           <div>
@@ -66,6 +74,30 @@
           <div>
             <label for="inputPlaza">Plaza de edición</label>
             <input type="text" class="form-control" id="inputPlaza">
+          </div>
+          <div>
+            <label for="inputPlaza">Año de edición</label>
+            <input type="text" class="form-control" id="inputAño">
+          </div>
+          <div>
+            <label for="inputPlaza">Fecha de lanzamiento</label>
+            <input type="text" class="form-control" id="inputFecha">
+          </div>
+          <div>
+            <label for="inputPlaza">Alto</label>
+            <input type="text" class="form-control" id="inputAlto">
+          </div>
+          <div>
+            <label for="inputPlaza">Ancho</label>
+            <input type="text" class="form-control" id="inputAncho">
+          </div>
+          <div>
+            <label for="inputPlaza">Colección</label>
+            <input type="text" class="form-control" id="inputColección">
+          </div>
+          <div>
+            <label for="inputPlaza">Número de páginas</label>
+            <input type="text" class="form-control" id="inputColección">
           </div>
         </div>
 
@@ -82,13 +114,6 @@
               <input type="radio" name="options-radios" id="optionsRadios2" value="option2"> Tapa blanda
             </label>
           </section>
-        </div>
-
-        <div class="espacio">
-          <input class="form-check-input" type="checkbox" id="gridCheck">
-          <label class="form-check-label" for="gridCheck"> <i>He leído y acepto los <u>términos de uso</u> de "I-Chega"
-              conforme a la <u>política de privacidad</u>.</i>
-          </label>
         </div>
 
         <div class="espacio">

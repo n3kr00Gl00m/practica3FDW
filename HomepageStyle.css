@@ -7,13 +7,15 @@ body {
 }
 
 /*----------------------------------------------------------------------------------------*/
-/*MENU*/
-.Menu {
+/*MENU ("Inicio, Contacto, Catálogo, Ofertas"*/
+.menu {
     font-weight: bold;
     font-size: 16px;  
     cursor: pointer;
     padding: 3px 3px; 
     line-height: 30px; /*Controls the line height in an element*/ 
+    text-decoration: none;
+    color: #000;
 }
 .background {
     background-color: rgba(30, 122, 93, 0.678);
@@ -30,7 +32,7 @@ body {
 
 /*----------------------------------------------------------------------------------------*/
 /*LITERARY GENRES*/
-.LiteraryGenres {
+.literaryGenres {
     font-family: helvetica;
     font-size: 16px;
     background-color: white;
@@ -41,7 +43,7 @@ body {
     margin: 0px;   
     line-height: 30px; 
 }
-.LiteraryGenres:hover {
+.literaryGenres:hover {
     background-color: rgba(30, 122, 93, 0.678);
     color: white;
 }
@@ -165,4 +167,11 @@ footer {
     background-color: #000;
     padding: 20px;
     color: white;
+}
+
+@media (max-width: 768px) { /*Adjustment for mobile phones or small screens*/
+    
+    .book { 
+        flex-direction: column; 
+    }
 }
