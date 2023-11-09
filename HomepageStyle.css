@@ -1,48 +1,50 @@
-/*----------------------------------------------------------------------------------------*/
+/*HOMEPAGE----------------------------------------------------------------------------------------*/
 /*BODY*/
 body {
-    background-color: white;
-    text-align: center;
-    font-family: helvetica; /*Font*/
+    text-align: center;  
 }
 
 /*----------------------------------------------------------------------------------------*/
-/*MENU ("Inicio, Contacto, Catálogo, Ofertas"*/
-.menu {
-    font-weight: bold;
-    font-size: 16px;  
-    cursor: pointer;
-    padding: 3px 3px; 
-    line-height: 30px; /*Controls the line height in an element*/ 
-    text-decoration: none;
-    color: #000;
-}
+/*MENU ("Inicio, Contacto, Catálogo, Ofertas")*/
 .background {
     background-color: rgba(30, 122, 93, 0.678);
 }
 
+.menu {
+    font-family: helvetica; 
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    padding: 10px; /*Space between menu categories*/
+    line-height: 40px; /*Controls the line height*/ 
+    cursor: pointer; /*Changes the appearance of the cursor when you hover over an element*/
+}
+
+.menu:hover { /*'hover' defines the behavior of an element when the cursor is placed over it*/
+    color: white;
+}
 
 /*----------------------------------------------------------------------------------------*/
 /*LOGO*/
 .logo{
-    align-content: left;
-    float: left;
-    margin-bottom:10px;
+    float: left; /*The logo is placed on the left and the element that follows it snaps to the right side of the logo*/
 }
 
 /*----------------------------------------------------------------------------------------*/
 /*LITERARY GENRES*/
 .literaryGenres {
-    font-family: helvetica;
-    font-size: 16px;
+    font-family: helvetica; 
+    font-size: 17px;
     background-color: white;
-    border-radius: 5px; 
-    border: 1px solid white;
+    border: none; 
+    border-radius: 5px; /*Customize the level of corner roundness*/ 
+    padding: 3px 3px; /*The first value is applied to the top and bottom margin and the second is applied to the left and right margin*/
     cursor: pointer;
-    padding: 3px 3px;
-    margin: 0px;   
-    line-height: 30px; 
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
+
 .literaryGenres:hover {
     background-color: rgba(30, 122, 93, 0.678);
     color: white;
@@ -51,30 +53,30 @@ body {
 /*--------------------------------------------------------------------------------*/
 /*SEARCHER*/
 .buscador {
-    border: 1px;
-    border-radius: 5px; /*Customize the level of corner roundness*/
-    outline: 1px solid #000;  
-    padding: 10px 10px; 
-    display: flex; /*Turns the search into a flexible element*/
+    font-family: helvetica; 
     text-align: left;
-    overflow: hidden; /*Hides any overflowing text*/
-    margin-top: 20px;
-    margin-bottom: 20px;
-    max-width: 500px; 
-    margin:auto;
+    border: 1px solid #000;  
+    border-radius: 5px;     
+    padding: 10px 10px; 
+    display: flex; /*Turns the search into a flexible element*/    
+    max-width: 550px; 
+    margin: auto;
 }
-.botonLupa {
-    border-radius: 3px; 
-    border: 1px solid black;
-    background-color: rgba(12, 135, 173, 0.34);
-    font-family: helvetica;
+
+/*Search*/
+.botonLupa {  
     font-size: 13px;
+    background-color: rgba(12, 131, 182, 0.395);  
+    border: 1px solid black; 
+    border-radius: 5px;      
     margin-right: 10px; 
 }
+
 .botonLupa:hover {
-    background-color: rgba(25, 58, 142, 0.784);
+    background-color: rgba(30, 122, 93, 0.678);
     color: white;
 }
+
 div > input {  /*Puts border transparent*/
     border: none;   
 }
@@ -82,68 +84,66 @@ div > input {  /*Puts border transparent*/
 /*--------------------------------------------------------------------------------*/
 /*HORIZONTAL LINE*/
 hr { /*For the horizontal line of separation*/
-    border: 1px solid #4d4b4b4c; /* Width and color of the line */
-    margin: 20px 0; /* Margin superior and inferior */
+    border: 1px solid #4d4b4b4c;
+    width: 100%; /*100% width of container*/
 }
 
 /*----------------------------------------------------------------------------------------*/
 /*ELEMENTS*/
 .book { 
     font-family: helvetica; 
-    font-size: 13px;
+    text-align: left; 
     background-color: white;
-    border-radius: 5px; 
     border: 1px solid #0000004a;
-    width: 170px; /*Dimensions*/
-    height: 350px; /*Dimensions*/
-    text-align: left;
-    cursor: pointer; 
-    padding: 9px 9px; 
+    border-radius: 5px;        
+    padding: 7px 7px; 
     white-space: nowrap; /*Avoid text line breaks*/
     overflow: hidden; 
-    position: relative; /*Necessary for internal span positioning*/
     margin: 5px;
-    margin-top: 30px;
+    margin-top: 0px;
+    max-width: 350px; 
+    min-width: 100px;
+    cursor: pointer; 
 }
-.book span {   
-    position: absolute; 
-    width: 170px; 
-    height: 1px; 
-    background-color: #0000004a; 
-    top: 246px;
-    left: 0;
+
+.space {
+    margin-right: 85px;
+    margin-left: 85px;
 }
-div > del {
-    font-size: 12px;
-    color: rgba(17, 166, 17, 0.878);
-}
+
 /*Title*/
-.bookTitle {
+.book-title {
+    font-size: 15px;
+    text-decoration: none;
     font-weight: bold;
     color: black;
-    text-decoration: none;
 }
+
+/*Author*/
+.book-author {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.612);
+}
+
 /*Price*/
-.bookPrice {
+.book-price {
     font-size: 15px;
     font-weight: bold;
     color: rgb(255, 0, 0);
-    line-height: 30px;
 }
-/*Add to cart*/
-.addToCart {
-    color:rgb(0, 0, 255);   
-}
-.addToCart:hover {
-    font-size: 15px;
-    color: rgba(0, 106, 255, 0.723);
+
+div > del {
+    font-size: 12px;
+    color: rgba(17, 166, 17, 0.878);
 }
 
 /*----------------------------------------------------------------------------------------*/
 /*CREATE NEW ITEM*/
 .newButtonA{
     margin-top: 34px;
+
 }
+
 .newButton {
     font-family: helvetica;
     font-size: 15px;
@@ -151,14 +151,214 @@ div > del {
     text-decoration: none;
     border: 2px solid #0000004a;
     color: black;
-    background-color: #0000004a;
+    background-color: rgba(12, 131, 182, 0.395);
     cursor: pointer;
     border-radius: 5px;
 }
+
 .newButton:hover {
     background-color: rgba(30, 122, 93, 0.678);
     color: white;
 }
+
+
+
+
+
+/*PRODUCT DESCRIPTION----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+main { /*To all elements of the page*/
+    font-family: helvetica; 
+    padding: 30px;
+}
+
+.book-details {
+    display: flex; /*Design in row*/
+}
+@media (max-width: 768px) { /*Adjustment for mobile phones or small screens*/    
+    .book-details { 
+        flex-direction: column; 
+    }
+}
+
+/*----------------------------------------------------------------------------------------*/
+/*BOOK DESCRIPTION*/
+.book-description {
+    text-align: left;
+    padding-left: 15px;
+}
+
+/*Tittle*/
+.big-title {
+    font-weight: bold;
+}
+
+h4 {
+    padding-top: 10px;
+}
+
+/*Price*/
+.price-book {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+}
+
+.price-discount {
+    font-size: 13px;
+    text-decoration: line-through;
+    color: rgba(67, 67, 67, 0.586);
+}
+
+.price-web {
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(67, 67, 67, 0.586);
+    text-align: left;
+    padding: 3px;
+}
+
+/*Genres*/
+ul {
+    list-style: none; /*Remove list markers*/
+}
+
+li {
+    display: inline; /*Displays elements side by side*/
+    margin-right: 3px;
+}
+
+.genres {
+    font-size: 15px;
+    line-height: 2; /*Line spacing*/
+    color: white;
+    background-color: rgba(12, 135, 173, 0.932);
+    padding: 3px;    
+}
+
+/*Synopsis*/
+.book-sinopsis {
+    font-size: 15px;
+}
+ 
+/*----------------------------------------------------------------------------------------*/  
+/*BUTTON "Comprar"*/
+.compraYa button {
+    background-color: rgba(12, 135, 173, 0.932);
+    color: #fff;
+    border: none;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.compraYa button:hover { 
+    background-color: rgba(0, 0, 255, 0.875);
+}
+
+.compraYa img {
+    margin-right: 15px;
+}
+
+/*----------------------------------------------------------------------------------------*/
+/*TECHNICAL INFORMATION*/
+.ficha-tecnica {
+    margin: 0 auto; /*Center element horizontaly*/
+    width: 300px; /*To center elements and make it responsive*/
+    margin-bottom: 30px;
+}
+
+.ficha-tecnica th, .ficha-tecnica td { /*Style table (th-> left side, td-> right side)*/
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 7px;
+    align-content: center;
+}
+
+.ficha-tecnica th { /*Grey cell (left side)*/
+    background-color: #f2f2f2;
+}
+
+/*VALORATIONS*/
+.opinion {
+    text-align: center; 
+    background-color: white;
+    border: 1px solid #0000004a;      
+    padding: 7px 7px; 
+    max-width: 600px;
+	margin: 10px auto;
+}
+
+.opinion img { /*Style for make images round*/
+    padding: 7px 7px; 
+    width: 60px; 
+    height: 50px; 
+    border-radius: 50%;
+}
+
+/*--------------------------------------------------------------------------------*/
+/*REVIEW*/
+.container {
+	width: 40%;
+	margin:0 auto;
+}
+/*Style for placeholder*/
+#contact input[type="text"], #contact input[type="email"], #contact textarea, #contact a[type="submit"] {
+    font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+#contact { /*Grey box*/
+	background: rgba(57, 53, 53, 0.122);
+	padding: 25px;
+	margin: 50px 50px;
+}
+
+#contact h2 { /*"Deja tu comentario" style*/
+	color: rgb(248, 104, 31);
+}
+
+#contact input[type="text"], #contact input[type="email"] { /*Adjust small boxes*/
+	width: 100%;
+	border: 1px solid #CCC;
+	background:#FFF;
+	margin: 10px 0px 15px 0px;
+	padding: 10px;
+}
+
+#contact textarea { /*Adjust small boxes*/
+	width: 100%;
+	border: 1px solid #CCC;
+	background:#FFF;
+	margin: 0px;
+	padding: 10px;
+}
+
+#contact textarea { /*Bottom margin for "Escribe aquí tu comentario"*/
+	height: 100px;
+	max-width: 100%;
+    margin-bottom: 0px;
+}
+
+.newButtonGuardar {
+    font-family: helvetica;
+    font-size: 15px;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 2px solid #0000004a;
+    color: black;
+    background-color: rgba(248, 103, 31, 0.674);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.newButtonGuardar:hover {
+    background-color: rgba(30, 122, 93, 0.678);
+    color: white;
+}
+
+
 
 /*----------------------------------------------------------------------------------------*/
 /*FOOTER*/
@@ -167,11 +367,4 @@ footer {
     background-color: #000;
     padding: 20px;
     color: white;
-}
-
-@media (max-width: 768px) { /*Adjustment for mobile phones or small screens*/
-    
-    .book { 
-        flex-direction: column; 
-    }
 }
