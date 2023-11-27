@@ -1,0 +1,1 @@
+si se encuentra en la carpeta public, no hace falta que la referenciemos en las rutas absolutas

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--To make the page fit to the screen width of the customer-->
+    <title>I-CHEGA</title>
+    <link href="/css/HomepageStyle.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="/logo.png" />
+    <!--For icon on webpage-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous" 
+        type="text/css"/>
+</head>
+
+<body>
+    <!-------------------------------------------------------------------------------------------->
+    <!--MENU-->
+    <div class="background">
+        <a class="menu">INICIO</a>
+        <a class="menu">CATÁLOGO</a>
+        <a class="menu">OFERTAS</a>
+        <a class="menu">CONTACTO</a>
+    </div>
+
+    <!-------------------------------------------------------------------------------------------->
+    <!--LOGO-->
+    <div class="logo">
+        <a href="Homepage.html">
+            <img src="/logo.png" width="80" height="90" alt="I-CHEGA" />
+        </a>
+    </div>
+
+    <!-------------------------------------------------------------------------------------------->
+    <!--LITERARY GENRES-->
+    <form>
+        <!--<form> represents a section of a document that contains interactive controls-->
+        <button class="literaryGenres">Autoayuda</button>
+        <button class="literaryGenres">Biografía</button>
+        <button class="literaryGenres">Ciencia ficción</button>
+        <button class="literaryGenres">Fantasía</button>
+        <button class="literaryGenres">Ficción</button>
+        <button class="literaryGenres">Historia</button>
+        <button class="literaryGenres">Misterio</button>
+        <button class="literaryGenres">Poesía</button>
+        <button class="literaryGenres">Romance</button>
+    </form>
+
+    <!-------------------------------------------------------------------------------------------->
+    <!--SEARCHER-->
+    <div class="buscador">
+        <button type="button" class="botonLupa">Buscar</button>
+        <input type="text" placeholder="Busca por título, ISBN..." />
+        <!--<type> defines a text field-->
+        <!--<placeholder> is used to provide a hint of what the user is expected to enter in that space-->
+    </div>
+
+    <!--HORIZONTAL LINE-->
+    <hr />
+
+    <!-------------------------------------------------------------------------------------------->
+    <!--ELEMENTS-->
+<!--ELEMENTS-->
+<div class="space">
+    <div class="container-fluid">
+        <!--Total width-->
+        <!--The rows must be contained in a container-->
+        <div class="row g-3">
+
+            {{#libros}}
+                <!--Element1-->
+                <div class="col-3">
+                    <div class="book">
+                        <a href="/libros/{{id}}"><img src="{{src}}" class="img-fluid" /></a>
+                        <!--Image-->
+                        <!--<a> creates a link to other internet pages, files...-->
+                        <!--class="img-fluid" is used to make an image flexible and adapt to the width of its container-->
+                        <hr />
+                        <!--Horizontal line-->
+                        <div>
+                            <!--Title-->
+                            <a class="book-title" href="/html/productDescription.html">{{title}}</a>
+                        </div>
+                        <div class="book-author">{{autor}}</div>
+                        <!--Author-->
+                        <div class="book-price">{{price}}</div>
+                        <!--Price-->
+                    </div>
+                </div>
+            {{/libros}} 
+            
+            {{^libros}}
+                <div class="alert alert-primary" role="alert">
+                    No se ha subido aun ningun libro
+                </div>
+            {{/libros}}
+
+        </div>
+    </div>
+</div>
+
+
+    <!-------------------------------------------------------------------------------------------->
+    <!--CREATE NEW ITEM-->
+    <!--The “Crear nuevo elemento” button takes you to the new item page-->
+    <div class="newButtonA">
+        <a class="newButton" href="/Formulario.html">Crear nuevo elemento</a>
+    </div>
+
+    <!-------------------------------------------------------------------------------------------->
+    <!--FOOTER-->
+    <!--Footer is used to represent the footer section of a web document-->
+    <footer>
+        <p>
+            © 2023 I-CHIGO - Todos los derechos reservados. [Enlace a Política de
+            Privacidad] | [Enlace a Términos y Condiciones] Dirección: Universidad
+            Rey Juan Carlos, Móstoles, España Teléfono: +34 123 456 789 Email:
+            info@ichigo.com
+        </p>
+    </footer>
+</body>
+
+</html>
