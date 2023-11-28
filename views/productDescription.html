@@ -102,7 +102,7 @@
         <!--STARS REVIEW AND BUY BUTTON-->
         <section class="compraYa">
             <button>
-                <img src="../Photos/bolsa-de-la-compra.png" alt="bolsa de la compra" width="20" height="20">Comprar
+                <img src="https://cdn.icon-icons.com/icons2/1897/PNG/512/shoppingbag_120902.png" alt="bolsa de la compra" width="20" height="20">Comprar
             </button>
         </section>
 
@@ -137,45 +137,39 @@
         <!-------------------------------------------------------------------------------------------->
         <!--VALORATIONS-->
         <h4><u>Valoraciones:</u></h4>
+        {{#comentarios}}
         <div class="opinion">
-            <img src="../Photos/autoestima-valoracion-personal.png" alt="persona-valoración">
-            <h4>Ana</h4>
-            <p>"Buen libro. Mejor leerlo a oscuras y con un té."</p>
-            <p>5/5 ⭐</p>
+            <h4>{{name}}</h4>
+            <p>"{{textComment}}"</p>
+            <p>{{puntuacion}} ⭐</p>
         </div>
-        <div class="opinion">
-            <img src="../Photos/opinionRoberta.jpg" alt="persona-valoración">
-            <h4>Roberta</h4>
-            <p>"Se lo recomiendo a aquellos lectores que quieran acercarse a la tipología de libro de Stephen King."</p>
-            <p>4/5 ⭐</p>
-        </div>
-        <div class="opinion">
-            <img src="../Photos/pradells-1660902907.png" alt="persona-valoración">
-            <h4>Joan</h4>
-            <p>"No es una pesa pero sirve para calentar biceps."</p>
-            <p>3/5 ⭐</p>
-        </div>
+        {{/comentarios}}
+        {{^comentarios}}
+            <p>No hay comentarios disponibles.</p>
+        {{/comentarios}}
+
     </main>
 
     <!-------------------------------------------------------------------------------------------->
     <!--REVIEWS-->
-    <div class="container">
-        <form id="contact" method="post">
+    <div class="container-fluid">
+        <form action="/libros/{{id}}/newComment" method="post" id="contact">
             <h2>Deja tu comentario:</h2>
             <fieldset>
-                <input placeholder="Nombre" type="text">
+                <input name="name" placeholder="Nombre" type="text">
             </fieldset>
             <fieldset>
-                <textarea placeholder="Escribe aquí tu comentario...."></textarea>
+                <textarea name="textComment" placeholder="Escribe aquí tu comentario...."></textarea>
             </fieldset>
             <fieldset>
-                <input placeholder="0/5 ⭐" type="text">
+                <input name="puntuacion" placeholder="0/5 ⭐" type="text">
             </fieldset>
             <!-- BUTTONS -->
             <div>
-                <a class="newButtonGuardar">Guardar</a>
+                <button type="submit" class="newButtonGuardar" class="newButtonGuardar">Guardar</button>
             </div>
         </form>
+        
     </div>
 
     <!-------------------------------------------------------------------------------------------->

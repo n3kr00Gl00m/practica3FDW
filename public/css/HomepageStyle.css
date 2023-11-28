@@ -100,9 +100,7 @@ hr { /*For the horizontal line of separation*/
     white-space: nowrap; /*Avoid text line breaks*/
     overflow: hidden; 
     margin: 5px;
-    margin-top: 0px;
-    max-width: 350px; 
-    min-width: 100px;
+    width:max-content;
     cursor: pointer; 
 }
 
@@ -180,7 +178,9 @@ main { /*To all elements of the page*/
         flex-direction: column; 
     }
 }
-
+.column {
+    width: 40%; 
+}
 /*----------------------------------------------------------------------------------------*/
 /*BOOK DESCRIPTION*/
 .book-description {
@@ -191,6 +191,7 @@ main { /*To all elements of the page*/
 /*Tittle*/
 .big-title {
     font-weight: bold;
+    padding-top: 20px;
 }
 
 h4 {
@@ -303,6 +304,8 @@ li {
 .container {
 	width: 40%;
 	margin:0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 /*Style for placeholder*/
 #contact input[type="text"], #contact input[type="email"], #contact textarea, #contact a[type="submit"] {
