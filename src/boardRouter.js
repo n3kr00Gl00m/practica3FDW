@@ -3,15 +3,27 @@ import * as boardService from './boardService.js';
 
 const router = express.Router();
 
-    router.get('/', (req, res) => {
+  router.get('/', (req, res) => {
     res.render('Homepage.html', {
       libros: boardService.getLibros(),
     });
   });
-  
+
+
+  router.get('/formulario', (req, res) => {
+    res.render('Formulario.html');
+  });
+
+  router.get('/libros/:id/editLibro', (req, res) => {
+    let libroId = req.params.id;
+    let libro = boardService.getLibro(libroId);
+    let comentarios = boardService.getComentarios(libroId);
+    res.render('Formulario.html', { libro, comentarios, id: libroId });
+});
+
   router.post('/libros/newlibro', (req, res) => {
     let { src, title, description, autor, price } = req.body;
-    boardService.addLibro({ src, title, description, autor, price });
+    boardService.addLibro({ src, title, description, autor, price, comentarios});
     res.redirect('/');
   });
   

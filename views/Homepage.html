@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +10,6 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"
         type="text/css" />
 </head>
-
 <body>
     <!-- MENU -->
     <div class="background">
@@ -54,8 +52,7 @@
     <div class="space">
         <div class="container-fluid">
             {{#libros}}
-            <div class="row-cols-3">
-
+            <div class="row row-cols-1">
                 <div class="col">
                     <div class="book">
                         <a href="/libros/{{id}}"><img src="{{src}}" class="img-fluid" /></a>
@@ -71,7 +68,7 @@
             {{/libros}}
             {{^libros}}
             <div class="alert alert-primary" role="alert">
-                No se ha subido aun ningun libro
+                No se ha subido aún ningún libro
             </div>
             {{/libros}}
         </div>
@@ -79,7 +76,7 @@
 
     <!-- CREATE NEW ITEM -->
     <div class="newButtonA">
-        <a class="newButton" href="/Formulario.html">Crear nuevo elemento</a>
+        <a class="newButton" href="/html/Formulario.html">Crear nuevo elemento</a>
     </div>
 
     <!-- FOOTER -->
@@ -91,5 +88,4 @@
         </p>
     </footer>
 </body>
-
 </html>

@@ -100,14 +100,29 @@ hr { /*For the horizontal line of separation*/
     white-space: nowrap; /*Avoid text line breaks*/
     overflow: hidden; 
     margin: 5px;
-    width:max-content;
+    width: 250px;
+    height: 475px;
     cursor: pointer; 
+}
+
+.book img {
+    max-width: 100%; /* Ajusta el ancho máximo de las imágenes al 100% del contenedor */
+    height: 400px; /* Ajusta la altura automáticamente para mantener la proporción */
 }
 
 .space {
     margin-right: 85px;
     margin-left: 85px;
 }
+
+.container-fluid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas con el mismo ancho */
+    gap: 20px; /* Espacio entre las columnas */
+    margin: 20px; /* Márgenes para mejorar la legibilidad en pantallas más pequeñas */
+}
+
+
 
 /*Title*/
 .book-title {
@@ -173,11 +188,7 @@ main { /*To all elements of the page*/
 .book-details {
     display: flex; /*Design in row*/
 }
-@media (max-width: 768px) { /*Adjustment for mobile phones or small screens*/    
-    .book-details { 
-        flex-direction: column; 
-    }
-}
+
 .column {
     width: 40%; 
 }
@@ -301,12 +312,6 @@ li {
 
 /*--------------------------------------------------------------------------------*/
 /*REVIEW*/
-.container {
-	width: 40%;
-	margin:0 auto;
-    display: flex;
-    justify-content: space-between;
-}
 /*Style for placeholder*/
 #contact input[type="text"], #contact input[type="email"], #contact textarea, #contact a[type="submit"] {
     font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif;
@@ -370,4 +375,34 @@ footer {
     background-color: #000;
     padding: 20px;
     color: white;
+}
+
+/*----------------------------------------------------------------------------------------*/
+/*@MEDIA*/
+/*PRODUCT DESCRIPTION*/
+@media (max-width: 768px) { /*Adjustment for mobile phones or small screens*/    
+    .book-details { 
+        flex-direction: column; 
+    }
+}
+/*MAINPAGE*/
+
+@media (max-width: 770px) {
+
+    .space {
+        margin: 0;
+        padding: 0;
+        padding-left: 22px;
+    }
+    .book {
+        font-size: 12px;
+    }
+    .book img {
+        max-width:100%; 
+        height: auto; 
+    }
+    .container-fluid {
+        display: grid;
+        grid-template-columns: 1fr; /* Crea 4 columnas con el mismo ancho */
+    }
 }

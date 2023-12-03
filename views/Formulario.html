@@ -24,13 +24,12 @@
     <!--FORM-->
     <form action="/libros/newlibro" method="post">
       <h2>¿Eres escritor? Mándanos tu libro <span class="badge bg-primary">¡Nuevo!</span></h2>
-
       <label for="inputTitle">Título</label>
-      <input name="title" type="text" class="form-control" id="inputTitle" placeholder="Mi Libro, Luna de Plutón">
+      <input name="title" type="text" class="form-control" id="inputTitle" placeholder="Mi Libro, Luna de Plutón" value="{{libro.title}}">
 
       <div class="espacio">
         <label for="inputAuthor">Autor</label>
-        <input name="autor" type="text" class="form-control" id="inputAuthor" placeholder="Menganito">
+        <input name="autor" type="text" class="form-control" id="inputAuthor" placeholder="Menganito" value="{{libro.author}}">
       </div>
 
       <div class="espacio">
@@ -52,27 +51,27 @@
       <div class="espacio">
         <label for="inputSinopsis">Sinopsis</label>
         <textarea type="text" class="form-control" id="inputSinopsis" placeholder="En 1998, en pleno auge de ..."
-          rows="4" name="sinopsis"></textarea>
+          rows="4" name="sinopsis">{{libro.sinopsis}}</textarea>
       </div>
 
       <div class="espacio">
         <label for="inputISBN">ISBN</label>
-        <input type="text" class="form-control" id="inputISBN" name = "isbnName">
+        <input type="text" class="form-control" id="inputISBN" name = "isbnName" value="{{lirbo.isbn}}">
       </div>
 
       <div class="espacio">
         <label for="inputPrice">Precio</label>
-        <input name="price" type="text" class="form-control" id="inputPrice" name = "price">
+        <input name="price" type="text" class="form-control" id="inputPrice" name = "price" value="{{libro.price}}">
       </div>
 
       <div class="espacio">
         <label for="inputEditor">Editorial</label>
-        <input name = "editorial" type="text" class="form-control" id="inputEditor" >
+        <input name = "editorial" type="text" class="form-control" id="inputEditor" value="{{libro.editorial}}">
       </div>
 
       <div class="espacio">
         <label for="FormControlFile1">Añade una portada <i class="bi bi-card-image"></i></label>
-        <input name="src" type="text" class="form-control" id="inputPlaza" placeholder="URL">
+        <input name="src" type="text" class="form-control" id="inputPortada" placeholder="URL" value="{{libro.src}}">
       </div>
 
       <div class="espacio">
