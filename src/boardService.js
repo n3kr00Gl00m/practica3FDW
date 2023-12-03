@@ -91,17 +91,27 @@ addLibro({
 //--------------------------------------------------------------------
 //--------------------------------------------------------------------
 
-export function addLibro(libro) {
-  let id = nextId++;
-  libro.id = id.toString();
-  libros.set(libro.id, libro);
+export function addLibro(libro, idLibro) {
+  if (idLibro !== undefined && libros.has(idLibro)) {
+    // Actualiza el libro existente
+    const existingLibro = libros.get(idLibro);
+    libros.set(idLibro, { ...existingLibro, ...libro, id: idLibro.toString() });
+  } else {
+    // Añade un nuevo libro con un nuevo ID
+    let id = nextId++;
+    libro.id = id.toString();
+    libros.set(libro.id, libro);
+  }
 }
+
+
 
 export function deleteLibro(id) {
   libros.delete(id);
 }
 
 export function getLibros() {
+
   return [...libros.values()];
 }
 
@@ -124,9 +134,10 @@ export function addComentario(libroId, comentario) {
     console.error(`El libro con ID ${libroId} no existe.`);
   }
 }
-
 export function getComentarios(libroId) {
-  const libro = libros.get(libroId);
-  return libro ? [...libro.comentarios.values()] : [];
-}
+  console.log('GETCOMENTARIOS::', getLibros());
 
+  console.log('Libro ID:', libroId);
+  const libro = libros.get(libroId);
+  return libro && libro.comentarios ? [...libro.comentarios.values()] : [];
+}
