@@ -127,6 +127,10 @@
                                     <th>ISBN:</th>
                                     <td>{{libro.isbn}}</td>
                                 </tr>
+                                <tr>
+                                    <th>Numero de páginas:</th>
+                                    <td>{{libro.nPaginas}}</td>
+                                </tr>
                             </table>
                         </td>
                     </tr>
@@ -156,19 +160,20 @@
         <form action="/libros/{{id}}/newComment" method="post" id="contact">
             <h2>Deja tu comentario:</h2>
             <fieldset>
-                <input name="name" placeholder="Nombre" type="text">
+                <input name="name" placeholder="Nombre" type="text" required>
             </fieldset>
             <fieldset>
-                <textarea name="textComment" placeholder="Escribe aquí tu comentario...."></textarea>
+                <textarea name="textComment" placeholder="Escribe aquí tu comentario...." required></textarea>
             </fieldset>
             <fieldset>
-                <input name="puntuacion" placeholder="0/5 ⭐" type="text">
+                <input name="puntuacion" placeholder="0/5 ⭐" type="number" min="0" max="5" required>
             </fieldset>
             <!-- BUTTONS -->
             <div>
                 <button type="submit" class="newButtonGuardar" class="newButtonGuardar">Guardar</button>
             </div>
         </form>
+        
         
     </div>
 
