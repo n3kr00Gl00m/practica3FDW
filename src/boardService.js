@@ -1,3 +1,5 @@
+import clearScreen from "clear-terminal";
+
 const libros = new Map();
 let nextId = 0;
 let idComment = 0;
@@ -105,7 +107,6 @@ export function addLibro(libro, idLibro) {
 }
 
 
-
 export function deleteLibro(id) {
   libros.delete(id);
 }
@@ -135,9 +136,43 @@ export function addComentario(libroId, comentario) {
   }
 }
 export function getComentarios(libroId) {
-  console.log('GETCOMENTARIOS::', getLibros());
-
-  console.log('Libro ID:', libroId);
   const libro = libros.get(libroId);
   return libro && libro.comentarios ? [...libro.comentarios.values()] : [];
 }
+
+export function validarFormulario(req) {
+  const {
+    title,
+    author,
+    genre,
+    sinopsis,
+    isbn,
+    price,
+    editorial,
+    src
+  } = req.body;
+
+  let ret;
+
+  var inputTitle = title;
+  var inputAuthor = author;
+  var inputGenre = genre;
+  var inputSinopsis = sinopsis;
+  var inputISBN = isbn;
+  var inputPrice = price;
+  var inputEditor = editorial;
+  var inputPortada = src;
+
+  // Verificar si todos los campos visibles están llenos
+  if (!inputTitle || !inputAuthor || !inputGenre || !inputSinopsis || !inputISBN || !inputPrice || !inputEditor || !inputPortada) {
+    console.error("false");
+      // Console.log de todas las variables
+    ret = false;
+  } else {
+    console.log("true");
+    ret = true;
+  }
+  return ret;
+}
+
+

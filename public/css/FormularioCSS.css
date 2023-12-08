@@ -1,6 +1,64 @@
 body {
     font-family: helvetica; /*Font*/
 }
+
+/*----------------------------------------------------------------------------------------*/
+/*MENU ("Inicio, Contacto, Catálogo, Ofertas")*/
+.background {
+    background-color: rgba(30, 122, 93, 0.678);
+}
+
+.container-menu {
+    text-align: center;
+}
+.menu {
+    display: inline-block;
+    font-family: helvetica; 
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    padding: 10px; /*Space between menu categories*/
+    line-height: 40px; /*Controls the line height*/ 
+    cursor: pointer; /*Changes the appearance of the cursor when you hover over an element*/
+}
+
+.menu:hover { /*'hover' defines the behavior of an element when the cursor is placed over it*/
+    color: white;
+}
+
+/*----------------------------------------------------------------------------------------*/
+/*LOGO*/
+.logo{
+    float: left; /*The logo is placed on the left and the element that follows it snaps to the right side of the logo*/
+}
+
+/*----------------------------------------------------------------------------------------*/
+/*LITERARY GENRES*/
+.literaryGenres {
+    font-family: helvetica; 
+    font-size: 17px;
+    background-color: white;
+    border: none; 
+    border-radius: 5px; /*Customize the level of corner roundness*/ 
+    padding: 3px 3px; /*The first value is applied to the top and bottom margin and the second is applied to the left and right margin*/
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 1%;
+}
+
+.literaryGenres:hover {
+    background-color: rgba(30, 122, 93, 0.678);
+    color: white;
+}
+
+/*--------------------------------------------------------------------------------*/
+/*HORIZONTAL LINE*/
+hr { /*For the horizontal line of separation*/
+    border: 1px solid #4d4b4b4c;
+    width: 100%; /*100% width of container*/
+}
 .logo{
     align-content: left;
     float: left;
@@ -11,7 +69,7 @@ body {
     margin-right: 15px;
 }
 form {
-    padding-bottom: 50px
+    padding: 3%
 }
 
 footer {

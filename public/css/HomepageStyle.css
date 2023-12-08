@@ -111,8 +111,9 @@ hr { /*For the horizontal line of separation*/
 }
 
 .space {
-    margin-right: 85px;
-    margin-left: 85px;
+    margin: 0;
+    padding: 0;
+    padding-left: 2%; 
 }
 
 .container-fluid {
@@ -122,6 +123,73 @@ hr { /*For the horizontal line of separation*/
     margin: 20px; /* Márgenes para mejorar la legibilidad en pantallas más pequeñas */
 }
 
+/* Estilos adicionales para centrar la caja de comentarios */
+.container-fluid2{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 20px auto; /* Margen automático para centrar horizontalmente */
+    max-width: 800px; /* Ancho máximo para evitar que la caja sea demasiado ancha en pantallas grandes */
+    padding: 20px; /* Agrega espacio interno para mejorar la apariencia */
+}
+
+#contact {
+    background: rgba(57, 53, 53, 0.122);
+    padding: 25px;
+    margin: 0 auto; /* Centra horizontalmente dentro de .container-fluid */
+    max-width: 600px; /* Ajusta el ancho máximo según tus preferencias */
+}
+
+#contact h2 {
+    color: rgb(248, 104, 31);
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea,
+#contact a[type="submit"] {
+    font: 400 12px/16px "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+#contact input[type="text"],
+#contact input[type="email"] {
+    width: 100%;
+    border: 1px solid #CCC;
+    background: #FFF;
+    margin: 10px 0px 15px 0px;
+    padding: 10px;
+}
+
+#contact textarea {
+    width: 100%;
+    border: 1px solid #CCC;
+    background: #FFF;
+    margin: 0px;
+    padding: 10px;
+}
+
+#contact textarea {
+    height: 100px;
+    max-width: 100%;
+    margin-bottom: 0px;
+}
+
+.newButtonGuardar {
+    font-family: helvetica;
+    font-size: 15px;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 2px solid #0000004a;
+    color: black;
+    background-color: rgba(248, 103, 31, 0.674);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.newButtonGuardar:hover {
+    background-color: rgba(30, 122, 93, 0.678);
+    color: white;
+}
 
 
 /*Title*/
@@ -197,6 +265,11 @@ main { /*To all elements of the page*/
 .book-description {
     text-align: left;
     padding-left: 15px;
+}
+
+.img-flu {
+    max-width: 300px; /* Ajusta el ancho máximo de las imágenes al 100% del contenedor */
+    height: 400px; /* Ajusta la altura automáticamente para mantener la proporción */
 }
 
 /*Tittle*/

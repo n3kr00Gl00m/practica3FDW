@@ -4,7 +4,6 @@ import * as boardService from './boardService.js';
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  console.log('GETCOMENTARIOS::', boardService.getLibros());
   res.render('Homepage.html', {
     libros: boardService.getLibros(),
   });
@@ -27,10 +26,13 @@ router.get('/libros/:id/editLibro', (req, res) => {
 });
 
 router.post('/libros/newlibro', (req, res) => {
-  let { src, title, description, author, price, idLibro } = req.body;
-
-  boardService.addLibro({ src, title, sinopsis: description, author, price }, idLibro);
-  res.redirect('/');
+  if (boardService.validarFormulario(req)) {
+    const { idLibro } = req.body;
+    boardService.addLibro(req.body, idLibro);  // Utiliza idLibro para editar el libro existente
+    res.redirect('/');
+  } else {
+    res.render('error_formulario.html');
+  }
 });
 
 router.post('/libros/:id/newComment', (req, res) => {

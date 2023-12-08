@@ -12,71 +12,111 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!-- LINK TO BOOTSTRAP ICONS -->
   <link rel="stylesheet" href="/css/FormularioCSS.css" type="text/css">
+
+
+
+  <title>I-CHEGA</title>
+  <link rel="icon" href="/logo.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"
+    type="text/css" />
 </head>
 
 <body>
-  <div class="row">
-    <a class="logo" href="Homepage.html"><img src="/logo.png" width="80" height="90" alt="I-CHEGA"></a>
+  <!-- MENU -->
+  <div class="container-menu">
+    <div class="background">
+      <a class="menu">INICIO</a>
+      <a class="menu">CATÁLOGO</a>
+      <a class="menu">OFERTAS</a>
+      <a class="menu">CONTACTO</a>
+    </div>
 
-    <form action="/libros/newlibro" method="post">
-      <h2>¿Eres escritor? Mándanos tu libro <span class="badge bg-primary">¡Nuevo!</span></h2>
-      <label for="inputTitle">Título</label>
-      <input name="title" type="text" class="form-control" id="inputTitle" placeholder="Mi Libro, Luna de Plutón" value="{{libro.title}}">
+    <!-- LOGO -->
+    <div class="logo">
+      <a href="/">
+        <img src="/logo.png" width="80" height="90" alt="I-CHEGA" />
+      </a>
+    </div>
 
-      <div class="espacio">
-        <label for="inputAuthor">Autor</label>
-        <input name="author" type="text" class="form-control" id="inputAuthor" placeholder="Menganito" value="{{libro.author}}">
-      </div>
-
-      <div class="espacio">
-        <label for="inputGender">Géneros</label>
-        <select id="inputIdioma" class="form-control" name="genre">
-          <option selected>{{libro.genre}}</option>
-          <option>Aventura</option>
-          <option>Ciencia Ficción</option>
-          <option>Cuento</option>
-          <option>Fantasía</option>
-          <option>Literatura</option>                  
-          <option>Romance</option>  
-          <option>Suspense</option> 
-          <option>Terror</option>
-          <option>Thriller</option>            
-        </select>
-      </div>
-
-      <div class="espacio">
-        <label for="inputSinopsis">Sinopsis</label>
-        <textarea type="text" class="form-control" id="inputSinopsis" placeholder="En 1998, en pleno auge de ..."
-          rows="4" name="description">{{libro.sinopsis}}</textarea>
-      </div>
-
-      <input type="hidden" name="idLibro" value="{{libro.id}}">
-
-      <div class="espacio">
-        <label for="inputISBN">ISBN</label>
-        <input type="text" class="form-control" id="inputISBN" name="isbnName" value="{{libro.isbn}}">
-      </div>
-
-      <div class="espacio">
-        <label for="inputPrice">Precio</label>
-        <input name="price" type="text" class="form-control" id="inputPrice" name="price" value="{{libro.price}}">
-      </div>
-
-      <div class="espacio">
-        <label for="inputEditor">Editorial</label>
-        <input name="editorial" type="text" class="form-control" id="inputEditor" value="{{libro.editorial}}">
-      </div>
-
-      <div class="espacio">
-        <label for="FormControlFile1">Añade una portada <i class="bi bi-card-image"></i></label>
-        <input name="src" type="text" class="form-control" id="inputPortada" placeholder="URL" value="{{libro.src}}">
-      </div>
-
-      <div class="espacio">
-        <button type="submit" class="btn btn-success">Guardar</button>
-        <a href="/" class="btn btn-danger">Cancelar</a>
-      </div>
+    <!-- LITERARY GENRES -->
+    <form>
+      <button class="literaryGenres">Autoayuda</button>
+      <button class="literaryGenres">Biografía</button>
+      <button class="literaryGenres">Ciencia ficción</button>
+      <button class="literaryGenres">Fantasía</button>
+      <button class="literaryGenres">Ficción</button>
+      <button class="literaryGenres">Historia</button>
+      <button class="literaryGenres">Misterio</button>
+      <button class="literaryGenres">Poesía</button>
+      <button class="literaryGenres">Romance</button>
     </form>
+
+    <!-- HORIZONTAL LINE -->
+    <hr />
+  </div>
+
+  <form action="/libros/newlibro" method="post">
+    <h2>¿Eres escritor? Mándanos tu libro <span class="badge bg-primary">¡Nuevo!</span></h2>
+    <label for="inputTitle">Título</label>
+    <input name="title" type="text" class="form-control" id="inputTitle" placeholder="Mi Libro, Luna de Plutón"
+      value="{{libro.title}}">
+
+    <div class="espacio">
+      <label for="inputAuthor">Autor</label>
+      <input name="author" type="text" class="form-control" id="inputAuthor" placeholder="Menganito"
+        value="{{libro.author}}">
+    </div>
+
+    <div class="espacio">
+      <label for="inputGender">Géneros</label>
+      <select id="inputIdioma" class="form-control" name="genre">
+        <option selected>{{libro.genre}}</option>
+        <option>Aventura</option>
+        <option>Ciencia Ficción</option>
+        <option>Cuento</option>
+        <option>Fantasía</option>
+        <option>Literatura</option>
+        <option>Romance</option>
+        <option>Suspense</option>
+        <option>Terror</option>
+        <option>Thriller</option>
+      </select>
+    </div>
+
+    <div class="espacio">
+      <label for="inputSinopsis">Sinopsis</label>
+      <textarea type="text" class="form-control" id="inputSinopsis" placeholder="En 1998, en pleno auge de ..." rows="4"
+        name="sinopsis">{{libro.sinopsis}}</textarea>
+    </div>
+
+    <input type="hidden" name="idLibro" value="{{libro.id}}">
+
+    <div class="espacio">
+      <label for="inputISBN">ISBN</label>
+      <input type="text" class="form-control" id="inputISBN" name="isbn" value="{{libro.isbn}}">
+    </div>
+
+    <div class="espacio">
+      <label for="inputPrice">Precio</label>
+      <input name="price" type="text" class="form-control" id="inputPrice" name="price" value="{{libro.price}}">
+    </div>
+
+    <div class="espacio">
+      <label for="inputEditor">Editorial</label>
+      <input name="editorial" type="text" class="form-control" id="inputEditor" value="{{libro.editorial}}">
+    </div>
+
+    <div class="espacio">
+      <label for="FormControlFile1">Añade una portada <i class="bi bi-card-image"></i></label>
+      <input name="src" type="text" class="form-control" id="inputPortada" placeholder="URL" value="{{libro.src}}">
+    </div>
+
+    <div class="espacio">
+      <button type="submit" class="btn btn-success">Guardar</button>
+      <a href="/" class="btn btn-danger">Cancelar</a>
+    </div>
+  </form>
   </div>
 
   <footer>

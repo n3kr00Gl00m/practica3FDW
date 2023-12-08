@@ -26,7 +26,7 @@
     <!--LOGO-->
     <div class="logo">
         <a href="/">
-            <img src="logo.png" width="80" height="90" alt="I-CHEGA">
+            <img src="/logo.png" width="80" height="90" alt="I-CHEGA">
         </a>
     </div>
 
@@ -61,7 +61,7 @@
             <!-------------------------------------------------------------------------------------------->
             <!--IMAGE-->
             <div>
-                <img src="{{libro.src}}" alt="Portada del Libro" class="img-fluid">
+                <img src="{{libro.src}}" alt="Portada del Libro" class="img-flu">
             </div>
             <!-------------------------------------------------------------------------------------------->
             <!--BOOK DESCRIPTION-->
@@ -125,7 +125,7 @@
                                 </tr>
                                 <tr>
                                     <th>ISBN:</th>
-                                    <td>{{libro.isbnName}}</td>
+                                    <td>{{libro.isbn}}</td>
                                 </tr>
                             </table>
                         </td>
@@ -152,7 +152,7 @@
 
     <!-------------------------------------------------------------------------------------------->
     <!--REVIEWS-->
-    <div class="container-fluid">
+    <div class="container-fluid2">
         <form action="/libros/{{id}}/newComment" method="post" id="contact">
             <h2>Deja tu comentario:</h2>
             <fieldset>
