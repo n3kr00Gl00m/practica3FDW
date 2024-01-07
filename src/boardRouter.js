@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   res.render('Homepage.html', {
-    libros: boardService.getLibros(),
+    libros: boardService.getLibros(0,5),
   });
 });
 
@@ -54,5 +54,17 @@ router.get('/libros/:id/delete', (req, res) => {
   boardService.deleteLibro(req.params.id);
   res.render('deleted_libro');
 });
+
+router.get('/libros', (req, res) => {
+  const from = parseInt(req.query.from);
+  const to = parseInt(req.query.to);
+
+  const libros = boardService.getLibros(from, to);
+
+  res.render('libros.html', {
+    libros: libros
+  });
+});
+
 
 export default router;

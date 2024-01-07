@@ -1,0 +1,20 @@
+{{#libros}}
+<div class="row row-cols-1">
+    <div class="col">
+        <div class="book" id="book">
+            <a href="/libros/{{id}}"><img src="{{src}}" class="img-fluid" /></a>
+            <hr />
+            <div>
+                <a class="book-title" href="/html/productDescription.html">{{title}}</a>
+            </div>
+            <div class="book-author">{{author}}</div>
+            <div class="book-price">{{price}}</div>
+        </div>
+    </div>
+</div>
+{{/libros}}
+{{^libros}}
+<div class="alert alert-primary" role="alert">
+    No se ha subido aún ningún libro
+</div>
+{{/libros}}
