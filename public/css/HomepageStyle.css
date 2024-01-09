@@ -112,8 +112,7 @@ hr { /*For the horizontal line of separation*/
 
 .space {
     margin: 0;
-    padding: 0;
-    padding-left: 2%; 
+    padding: 0; 
 }
 
 .container-fluid {

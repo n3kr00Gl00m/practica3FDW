@@ -63,32 +63,51 @@ export function validarFormulario(req) {
     sinopsis,
     isbn,
     price,
+    nPaginas,
     editorial,
     src
   } = req.body;
 
-  let ret;
-
-  var inputTitle = title;
-  var inputAuthor = author;
-  var inputGenre = genre;
-  var inputSinopsis = sinopsis;
-  var inputISBN = isbn;
-  var inputPrice = price;
-  var inputEditor = editorial;
-  var inputPortada = src;
-
-  // Verificar si todos los campos visibles están llenos
-  if (!inputTitle || !inputAuthor || !inputGenre || !inputSinopsis || !inputISBN || !inputPrice || !inputEditor || !inputPortada) {
-    console.error("false");
-      // Console.log de todas las variables
-    ret = false;
-  } else {
-    console.log("true");
-    ret = true;
+  // Verificar si todos los campos están llenos
+  if (!title || !author || !genre || !sinopsis || !isbn || !price || !nPaginas || !editorial || !src) {
+    console.error("Al menos uno de los campos obligatorios está vacío");
+    return false;
   }
-  return ret;
+
+  // Validar que el título comience con una letra mayúscula
+  if (!/^[A-Z].*/.test(title)) {
+    console.error("El título debe empezar con una letra mayúscula");
+    return false;
+  }
+
+  // Validar que la URL de la portada sea válida
+  if (!/https?:\/\/.+/.test(src)) {
+    console.error("La URL de la portada no es válida");
+    return false;
+  }
+
+  // Validar que el ISBN sea un número válido
+  if (!/^\d{13}$/.test(isbn)) {
+    console.error("El ISBN debe contener 13 dígitos numéricos");
+    return false;
+  }
+
+  // Validar que el precio sea un número positivo
+  if (isNaN(parseFloat(price)) || parseFloat(price) <= 0) {
+    console.error("El precio debe ser un número positivo");
+    return false;
+  }
+
+  // Validar que el número de páginas sea un número positivo
+  if (isNaN(parseInt(nPaginas)) || parseInt(nPaginas) <= 0) {
+    console.error("El número de páginas debe ser un número positivo");
+    return false;
+  }
+
+  console.log("Todos los campos pasaron las validaciones");
+  return true;
 }
+
 
 export function loadSampleData() {
 

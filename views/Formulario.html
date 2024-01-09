@@ -6,122 +6,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>I-CHEGA</title>
   <link rel="stylesheet" href="/css/HomepageStyle.css" type="text/css">
-  <link rel="icon" href="please.png"> <!-- For icon on webpage -->
+  <link rel="icon" href="/logo.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- LINK TO BOOTSTRAP STYLE -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <!-- LINK TO BOOTSTRAP ICONS -->
   <link rel="stylesheet" href="/css/FormularioCSS.css" type="text/css">
-
-
-
-  <title>I-CHEGA</title>
-  <link rel="icon" href="/logo.png" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"
-    type="text/css" />
 </head>
 
 <body>
-  <!-- MENU -->
-  <div class="container-menu">
-    <div class="background">
-      <a class="menu">INICIO</a>
-      <a class="menu">CATÁLOGO</a>
-      <a class="menu">OFERTAS</a>
-      <a class="menu">CONTACTO</a>
+  <div class="container">
+    <form id="bookForm" action="/libros/newlibro" method="post" novalidate>
+      <h2>¿Eres escritor? Mándanos tu libro <span class="badge bg-primary">¡Nuevo!</span></h2>
+
+      <label for="inputTitle">Título</label>
+      <input name="title" type="text" id="inputTitle" class="form-control" placeholder="Mi Libro, Luna de Plutón"
+        required pattern="[A-Z].*">
+      <div class="invalid-feedback">
+        El título no puede estar vacío y debe comenzar con una letra mayúscula.
+      </div>
+
+      <div class="espacio">
+        <label for="inputAuthor">Autor</label>
+        <input name="author" type="text" class="form-control" placeholder="Menganito" required>
+        <div class="invalid-feedback">
+          Por favor, ingresa el nombre del autor.
+        </div>
+      </div>
+
+      <div class="espacio">
+        <label for="inputGender">Géneros</label>
+        <select id="inputIdioma" class="form-control" name="genre" required>
+          <option selected disabled value="">Selecciona un género</option>
+          <option>Aventura</option>
+          <option>Ciencia Ficción</option>
+          <option>Cuento</option>
+          <option>Fantasía</option>
+          <option>Literatura</option>
+          <option>Romance</option>
+          <option>Suspense</option>
+          <option>Terror</option>
+          <option>Thriller</option>
+        </select>
+        <div class="invalid-feedback">
+          Por favor, selecciona un género.
+        </div>
+      </div>
+
+      <div class="espacio">
+        <label for="inputSinopsis">Sinopsis</label>
+        <textarea type="text" class="form-control" id="inputSinopsis" placeholder="En 1998, en pleno auge de ..."
+          rows="4" name="sinopsis" required minlength="50" maxlength="500"></textarea>
+        <div class="invalid-feedback">
+          La sinopsis no puede estar vacía y debe contener entre 50 y 500 caracteres.
+        </div>
+      </div>
+
+      <input type="hidden" name="idLibro" value="{{libro.id}}">
+
+      <div class="espacio">
+        <label for="inputISBN">ISBN</label>
+        <input type="text" class="form-control" id="inputISBN" name="isbn" required pattern="[0-9]{13}">
+        <div class="invalid-feedback">
+            El ISBN debe contener exactamente 13 dígitos numéricos.
+        </div>
     </div>
 
-    <!-- LOGO -->
-    <div class="logo">
-      <a href="/">
-        <img src="/logo.png" width="80" height="90" alt="I-CHEGA" />
-      </a>
+      <div class="espacio">
+        <label for="inputPrice">Precio</label>
+        <input name="price" type="text" class="form-control" id="inputPrice" name="price" required pattern="[0-9]+(\.[0-9]{1,2})?">
+        <div class="invalid-feedback">
+            Por favor, ingresa un precio válido.
+        </div>
     </div>
 
-    <!-- LITERARY GENRES -->
-    <form>
-      <button class="literaryGenres">Autoayuda</button>
-      <button class="literaryGenres">Biografía</button>
-      <button class="literaryGenres">Ciencia ficción</button>
-      <button class="literaryGenres">Fantasía</button>
-      <button class="literaryGenres">Ficción</button>
-      <button class="literaryGenres">Historia</button>
-      <button class="literaryGenres">Misterio</button>
-      <button class="literaryGenres">Poesía</button>
-      <button class="literaryGenres">Romance</button>
+      <div class="espacio">
+        <label for="inputPagina">Numero de paginas</label>
+        <input name="nPaginas" type="number" class="form-control" id="inputPagina" name="nPaginas" required>
+        <div class="invalid-feedback">
+          Por favor, ingresa el número de páginas.
+        </div>
+      </div>
+
+      <div class="espacio">
+        <label for="inputEditor">Editorial</label>
+        <input name="editorial" type="text" class="form-control" id="inputEditor" required>
+        <div class="invalid-feedback">
+          Por favor, ingresa la editorial.
+        </div>
+      </div>
+
+      <div class="espacio">
+        <label for="FormControlFile1">Añade una portada <i class="bi bi-card-image"></i></label>
+        <input name="src" type="url" class="form-control" id="inputPortada" placeholder="URL" required
+        pattern="https?://[^\s/$.?#]+\.(jpg|jpeg|png|gif|bmp)">
+        <div class="invalid-feedback">
+          Por favor, ingresa una URL válida.
+        </div>
+      </div>
+
+      <div class="espacio">
+        <button type="submit" class="btn btn-success">Guardar</button>
+        <a href="/" class="btn btn-danger">Cancelar</a>
+      </div>
     </form>
-
-    <!-- HORIZONTAL LINE -->
-    <hr />
-  </div>
-
-  <form action="/libros/newlibro" method="post">
-    <h2>¿Eres escritor? Mándanos tu libro <span class="badge bg-primary">¡Nuevo!</span></h2>
-    <label for="inputTitle">Título</label>
-    <input name="title" type="text" class="form-control" id="inputTitle" placeholder="Mi Libro, Luna de Plutón"
-      value="{{libro.title}}">
-
-    <div class="espacio">
-      <label for="inputAuthor">Autor</label>
-      <input name="author" type="text" class="form-control" id="inputAuthor" placeholder="Menganito"
-        value="{{libro.author}}">
-    </div>
-
-    <div class="espacio">
-      <label for="inputGender">Géneros</label>
-      <select id="inputIdioma" class="form-control" name="genre">
-        <option selected>{{libro.genre}}</option>
-        <option>Aventura</option>
-        <option>Ciencia Ficción</option>
-        <option>Cuento</option>
-        <option>Fantasía</option>
-        <option>Literatura</option>
-        <option>Romance</option>
-        <option>Suspense</option>
-        <option>Terror</option>
-        <option>Thriller</option>
-      </select>
-    </div>
-
-    <div class="espacio">
-      <label for="inputSinopsis">Sinopsis</label>
-      <textarea type="text" class="form-control" id="inputSinopsis" placeholder="En 1998, en pleno auge de ..." rows="4"
-        name="sinopsis">{{libro.sinopsis}}</textarea>
-    </div>
-
-    <input type="hidden" name="idLibro" value="{{libro.id}}">
-
-    <div class="espacio">
-      <label for="inputISBN">ISBN</label>
-      <input type="text" class="form-control" id="inputISBN" name="isbn" value="{{libro.isbn}}">
-    </div>
-
-    <div class="espacio">
-      <label for="inputPrice">Precio</label>
-      <input name="price" type="text" class="form-control" id="inputPrice" name="price" value="{{libro.price}}">
-    </div>
-    
-    <div class="espacio">
-      <label for="inputPrice">Numero de paginas</label>
-      <input name="nPaginas" type="number" class="form-control" id="inputPagina" name="nPaginas" value="{{libro.nPaginas}}">
-    </div>
-
-    <div class="espacio">
-      <label for="inputEditor">Editorial</label>
-      <input name="editorial" type="text" class="form-control" id="inputEditor" value="{{libro.editorial}}">
-    </div>
-
-    <div class="espacio">
-      <label for="FormControlFile1">Añade una portada <i class="bi bi-card-image"></i></label>
-      <input name="src" type="text" class="form-control" id="inputPortada" placeholder="URL" value="{{libro.src}}">
-    </div>
-
-    <div class="espacio">
-      <button type="submit" class="btn btn-success">Guardar</button>
-      <a href="/" class="btn btn-danger">Cancelar</a>
-    </div>
-  </form>
   </div>
 
   <footer>
@@ -134,6 +120,33 @@
     </p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      var form = document.getElementById('bookForm');
+
+      form.addEventListener('input', function (event) {
+        if (event.target.tagName.toLowerCase() === 'input' || event.target.tagName.toLowerCase() === 'textarea') {
+          if (!event.target.checkValidity()) {
+            event.target.classList.add('is-invalid');
+          } else {
+            event.target.classList.remove('is-invalid');
+          }
+        }
+      });
+
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+
+        form.classList.add('was-validated');
+      }, false);
+    })();
+  </script>
 </body>
 
 </html>
